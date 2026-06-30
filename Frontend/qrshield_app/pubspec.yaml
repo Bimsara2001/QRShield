@@ -1,0 +1,43 @@
+name: qrshield_app
+description: "QRShield App"
+
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '^3.12.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # QR Scanner
+  mobile_scanner: ^5.0.0
+
+  # API Calls
+  http: ^1.2.0
+
+  # Screenshot Loading
+  cached_network_image: ^3.3.1
+
+  # Modern Fonts
+  google_fonts: ^6.2.1
+
+  # Charts & Analytics
+  fl_chart: ^0.69.0
+
+  # PDF Export
+  pdf: ^3.11.0
+  printing: ^5.13.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true

@@ -1,0 +1,16 @@
+url,label
+https://google.com,legitimate
+https://github.com,legitimate
+https://microsoft.com,legitimate
+https://apple.com,legitimate
+https://wikipedia.org,legitimate
+https://paypal.com,legitimate
+https://amazon.com,legitimate
+https://facebook.com,legitimate
+https://linkedin.com,legitimate
+https://stackoverflow.com,legitimate
+http://example.com,legitimate
+https://bit.ly/3test123,suspicious
+http://192.168.1.1/login,suspicious
+http://free-gift-login.example.com,suspicious
+http://paypal-security-check.example.com,suspicious
