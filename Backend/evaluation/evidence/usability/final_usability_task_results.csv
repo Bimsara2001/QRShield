@@ -1,0 +1,10 @@
+task_id,task,completed_easily_count,completed_with_difficulty_count,failed_count,successful_completion_count,task_success_rate_percent,easy_completion_rate_percent
+T1,Open the QRShield application,3,2,0,5,100.00,60.00
+T2,Scan a safe QR code,5,0,0,5,100.00,100.00
+T3,Identify the risk level shown in the scan result,5,0,0,5,100.00,100.00
+T4,View the destination preview or screenshot in the scan result,5,0,0,5,100.00,100.00
+T5,Analyze a safe URL using Manual URL Scan,5,0,0,5,100.00,100.00
+T6,Open Scan History and locate a previous scan,5,0,0,5,100.00,100.00
+T7,Open Settings and identify the Backend Status,5,0,0,5,100.00,100.00
+T8,Locate the Clear History option,5,0,0,5,100.00,100.00
+T9,Enter an invalid URL in Manual URL Scan and identify the error message,5,0,0,5,100.00,100.00

@@ -1,0 +1,25 @@
+{
+  "source_file": "evaluation/data/usability/QRShield Usability Evaluation (Responses) .xlsx",
+  "participant_count": 5,
+  "participant_ids": ["P1", "P2", "P3", "P4", "P5"],
+  "optional_response_availability": {
+    "most_confusing_part": {"provided": 5, "blank": 0},
+    "liked_most": {"provided": 5, "blank": 0},
+    "recommended_improvement": {"provided": 3, "blank": 2}
+  },
+  "common_confusion_or_issues": [
+    {"theme": "No confusion reported", "participant_count": 3, "denominator": 5, "basis": "Three participants explicitly said that nothing was confusing."},
+    {"theme": "Initial interpretation of the risk score", "participant_count": 1, "denominator": 5, "basis": "One participant identified understanding the risk score at first as confusing."},
+    {"theme": "Technical scan details", "participant_count": 1, "denominator": 5, "basis": "One participant described some scan details as technical."}
+  ],
+  "features_liked": [
+    {"theme": "Simple QR scanning process", "participant_count": 2, "denominator": 5},
+    {"theme": "Destination/website preview before opening a link", "participant_count": 2, "denominator": 5},
+    {"theme": "Clear risk result", "participant_count": 1, "denominator": 5}
+  ],
+  "suggested_improvements": [
+    {"theme": "Clearer explanations of the risk score or detected risks", "participant_count": 2, "denominator": 5},
+    {"theme": "Improve scanning speed", "participant_count": 1, "denominator": 5}
+  ],
+  "interpretation_boundary": "These are descriptive themes from an anonymized N=5 usability sample. They are not statistically generalizable findings."
+}

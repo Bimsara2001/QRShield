@@ -1,0 +1,24 @@
+{
+  "experiment": "H5B1 generic-form precision fix",
+  "server_used": "current Backend venv on temporary port 8002 because stale port 8001 listener was inaccessible",
+  "google": {
+    "status": "success",
+    "title": "Google",
+    "risk_score": 10,
+    "verdict": "Medium Risk",
+    "reasons": ["URL redirected to another address"],
+    "screenshot_http_status": 200,
+    "virustotal_status": "success"
+  },
+  "example_com": {
+    "status": "success",
+    "title": "Example Domain",
+    "risk_score": 0,
+    "verdict": "Low Risk",
+    "reasons": [],
+    "screenshot_http_status": 200,
+    "virustotal_status": "success"
+  },
+  "note": "Google retains only the genuine hostname redirect signal; the generic form reason is gone. Example.com remains unchanged.",
+  "worker_cleanup": "verified separately; no production detector or threshold configuration changed"
+}

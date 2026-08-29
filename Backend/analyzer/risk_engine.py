@@ -1,5 +1,6 @@
 import re
 import tldextract
+from urllib.parse import urlsplit
 
 SUSPICIOUS_KEYWORDS = {
     "login": 15,
@@ -29,6 +30,62 @@ SHORTENERS = [
     "ow.ly",
     "is.gd",
 ]
+
+
+def _shortener_hostname_matches(url, shortener):
+    """Return whether the parsed hostname is the configured shortener host."""
+    try:
+        hostname = urlsplit(url).hostname
+    except ValueError:
+        return False
+    if not hostname:
+        return False
+
+    hostname = hostname.lower()
+    if hostname.endswith("."):
+        hostname = hostname[:-1]
+    shortener = shortener.lower()
+    if shortener.endswith("."):
+        shortener = shortener[:-1]
+
+    return hostname == shortener or hostname.endswith("." + shortener)
+
+
+def _normalize_url_for_redirect_comparison(url):
+    """Normalize only URL serialization differences that preserve destination."""
+    try:
+        parsed = urlsplit(url)
+        port = parsed.port
+    except ValueError:
+        # Preserve the old conservative behavior for malformed URLs.
+        return ("raw", url)
+
+    hostname = parsed.hostname
+    if hostname:
+        hostname = hostname.lower()
+        if hostname.endswith("."):
+            hostname = hostname[:-1]
+        # Treat only the conventional web-host prefix as canonical for
+        # redirect-risk comparison. Other subdomains remain significant.
+        if hostname.startswith("www.") and hostname != "www.":
+            hostname = hostname[4:]
+
+    if (parsed.scheme.lower() == "http" and port == 80) or (
+        parsed.scheme.lower() == "https" and port == 443
+    ):
+        port = None
+
+    # Query strings remain significant. Fragments are client-side state and
+    # are intentionally ignored because they are not sent to the server.
+    return (
+        parsed.scheme.lower(),
+        parsed.username,
+        parsed.password,
+        hostname,
+        port,
+        parsed.path or "/",
+        parsed.query,
+    )
 
 
 def analyze_url(url, final_url):
@@ -63,7 +120,7 @@ def analyze_url(url, final_url):
 
     # Shortener Detection
     for shortener in SHORTENERS:
-        if shortener in url_lower:
+        if _shortener_hostname_matches(url, shortener):
             score += 40
             reasons.append("URL shortener detected")
 
@@ -84,7 +141,7 @@ def analyze_url(url, final_url):
         reasons.append("Multiple hyphens detected")
 
     # Redirect Detection
-    if url != final_url:
+    if _normalize_url_for_redirect_comparison(url) != _normalize_url_for_redirect_comparison(final_url):
         score += 10
         reasons.append("URL redirected to another address")
 

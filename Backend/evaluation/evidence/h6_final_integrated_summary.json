@@ -1,0 +1,50 @@
+{
+  "evaluation": "H6 final integrated-system evidence and freeze",
+  "status": "PASS",
+  "scope": "Final safe-live operational integration evidence only; no detection tuning or production behavior changes were made for H6.",
+  "frozen_component_hashes_sha256": {
+    "Backend/analyzer/risk_engine.py": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+    "Backend/detectors/phishing_detector.py": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+    "Backend/main.py": "49b4c37aac0300a9c31793fd7675e8f363bd19ebdb3186ba89a3042401ab2ab4"
+  },
+  "detector_configuration": {
+    "screening_threshold": 10,
+    "high_risk_threshold": 70,
+    "risk_engine_redirect_precision": "Only adding or removing the conventional leading www. hostname prefix is equivalent for redirect-risk comparison; arbitrary subdomains remain meaningful.",
+    "phishing_detector_expected_h5c_hash_matches": true
+  },
+  "safe_live_result_count": 5,
+  "safe_live_results_file": "h6_safe_live_results.csv",
+  "operational_checks_file": "h6_operational_checks.json",
+  "backend_test_suite": {
+    "command": "venv\\Scripts\\python.exe -m pytest tests -q -p no:cacheprovider",
+    "result": "162 passed",
+    "test_count": 162
+  },
+  "h6_check_status": {
+    "frozen_hashes": "PASS",
+    "safe_live_scans": "PASS",
+    "screenshot_delivery": "PASS",
+    "manual_mongodb_persistence_verification": "PASS",
+    "ephemeral_worker_cleanup": "PASS",
+    "private_target_fail_closed_validation": "PASS",
+    "docker_infrastructure_recovery": "PASS",
+    "backend_regression_suite": "PASS"
+  },
+  "frozen_prior_evaluations": {
+    "h3c": "Frozen URL-only labelled holdout accuracy evaluation; not recomputed or tuned during H6.",
+    "h5c": "Frozen controlled HTML heuristic validation; not recomputed or tuned during H6.",
+    "h6_precheck": "The prior www redirect precision fix removed the Google canonicalization false positive before this final evidence run."
+  },
+  "freeze": {
+    "production_detection_logic_changed": false,
+    "thresholds_changed": false,
+    "sandbox_security_changed": false,
+    "virustotal_changed": false,
+    "mongodb_changed": false,
+    "api_behavior_changed": false,
+    "flutter_behavior_changed": false,
+    "further_tuning_performed": false,
+    "next_optimization_phase_started": false
+  }
+}

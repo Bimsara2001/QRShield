@@ -1,0 +1,663 @@
+{
+  "before_false_positive_samples": [
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.saffronart.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000007",
+      "url_sha256": "484880c6210c311b31e0d226ef11279e1866f73b57d8da9cd96ebd813a0153a7"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.lanereport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000063",
+      "url_sha256": "6c1b0efb4d9b3cecc00f6285936e6c4d6e8b100d053c18d1047c8a43d36c59a2"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.spket.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000113",
+      "url_sha256": "9aa3dc8c3dd527b4db530871c977030a5f91117e0e2193368a8e25e2653c2955"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.gunsmokenet.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000118",
+      "url_sha256": "cc6d0302f8ae2a009e00beddbea0b2085c3e19c734d505cd489035a8ad35c34e"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.areadevelopment.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000262",
+      "url_sha256": "f0cebeb0c1ecf87e6c11d659d590f5587dccda5a9911bace5899fb6e8ed39d7f"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.affenknecht.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000380",
+      "url_sha256": "b6cbb403b8acd702b762fcd384501063b372593ebe1eabb154f377df3b323c67"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.boortmalt.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000396",
+      "url_sha256": "5de0ea281474928139a9c0e4a72c9cc045d0b12f7808aa98b3567d5c31c7f233"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.balkaninstitut.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000451",
+      "url_sha256": "410339940552d6dfeb8ba4f16a76f348c77a2ce825fde665d29141b22dfdbc7c"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.kladionicabet.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000505",
+      "url_sha256": "356e46f934c343b87c69c521d2e64f84beb7272b89d0b9073c37334771f89a1d"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.nma-fallout.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000513",
+      "url_sha256": "b8cf8c09237949ce8e5dadd72b4a91be973a2b9016657dccd9de1b5bda418dae"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.fay-west.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000547",
+      "url_sha256": "7265cf6394755e68d0684e1d40eaea3a44efac21c5e8e73665c757715e5af93b"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.waynemadsenreport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000586",
+      "url_sha256": "935ceb681d1b55cab52178b0fb9feb2010bccaf9b4385a087400da6cc0ae254c"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.doverport.co.uk",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000651",
+      "url_sha256": "7139492f68100e45f1d33fdd163450da291af0c2264d95665599631648d72ebc"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.goldstandard-gamsat.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000679",
+      "url_sha256": "c5808fa105fb933dbc336bdc6f19e261ae0b7aca1b20024e4361781191cb5b60"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.mrbreakfast.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000726",
+      "url_sha256": "5f66cc98a84b33cb04699b97e69a221530ed09a670bb638cfd0dd29114a5083d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.venuereport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000786",
+      "url_sha256": "cd79e66c34de70fa826f8e4ac7c71afeee027812f709536ea53891789807752d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.hanbit.co.kr",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001021",
+      "url_sha256": "a2ce2bb6c48bfe6864026d718fcee1f4b046e8c6ae550286293d032c762730b4"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.dechert.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001046",
+      "url_sha256": "6288521a3de557ca4839ba2ac4997fd418a4d634a82829c4817845aca475c76d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.istockanalyst.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001112",
+      "url_sha256": "abe2098c07f2abe9ed9aa556cb25bc08987a533f683f4ea32b0b90ddf06a0755"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.matchaeologist.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001177",
+      "url_sha256": "8d61ffbf1a7222f33e4f3189fb35afeac6b3e2d9adb55d40ba0f4d3c45e88d02"
+    }
+  ],
+  "development_only": true,
+  "phishing_detection_loss_samples": [
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.constructiongst.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-000138",
+      "url_sha256": "1813caaa37d46611a523d4aa7d45b2fa42e3cd8d7682d111f3a620c1d2fa46a9"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.laurabarstowart.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-001130",
+      "url_sha256": "94c1d842d903dbe4b677681983f1bf938cd998fd0487d206f1941fc51a185042"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "pretecsagt.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001192",
+      "url_sha256": "895aedc2e731c62bd5601e3dfe4d0a276aca78f6425c3f2f80f77ba30c2a7aa2"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.kapustakapaet.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-001317",
+      "url_sha256": "94df16b36ba0d2dbba144b261d13a1b7c779ba42898a0e640bf04f943f0b56f9"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.images.webprogobest.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-001460",
+      "url_sha256": "62228a5f1372e36529e299456d9d1d44309ebd4a1bc96e4fa2f17d7b39d1eca9"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.cachecontent.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-001903",
+      "url_sha256": "8bf791950a64059830e4cee4bec89e896c254b91576f4a6b715fd8e64f0a7c6a"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.netshieldkit.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-002327",
+      "url_sha256": "12ca37a5c394b489849f831d1613c66cb048746c3a239d5e69398537d05abb06"
+    },
+    {
+      "after_score": 25,
+      "before_score": 65,
+      "domain": "www.calculator-1e016.appspot.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS",
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-002389",
+      "url_sha256": "d9b40d282b3a8a093d8abc9c57273d17bbc462d3a0d9a0cc14bd63a659593f29"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.nbdigit.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-002536",
+      "url_sha256": "2bb296f72478b492d6760f5efb143ab90eb479774b81533b1b508166da56bdf8"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.asymmetricfile.blogspot.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-002557",
+      "url_sha256": "6f19570250c314a8e33b1f79a3d6ff183632207d7103f759fa99a9fa5da3a936"
+    },
+    {
+      "after_score": 25,
+      "before_score": 65,
+      "domain": "www.hiphopeconomicdevelopment.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS",
+        "Suspiciously long domain name"
+      ],
+      "sample_id": "phiusiil-002823",
+      "url_sha256": "c35930fa4f286a4a630c3b55962dfaf16e4d37b7468ce719278739665acc9166"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.nofeeshost.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-003128",
+      "url_sha256": "f928d73b85ea8b75dbd58aa5b1fa1e9351bc8d5feee31eb9ae9cc4cf33c69ad3"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.tasut.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-003154",
+      "url_sha256": "0784938391af034947dce3c829e15c6021385c6b64f79d1316128f0104a6e26a"
+    },
+    {
+      "after_score": 25,
+      "before_score": 65,
+      "domain": "pdsiimited-dot-sharepointpdf-367707.uk.r.appspot.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected",
+        "Multiple hyphens detected"
+      ],
+      "sample_id": "phiusiil-003214",
+      "url_sha256": "49c97b1c5d24f3b134c725183596bf536e30cedb36b3658c38288fc245ae503e"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.01transport.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-003335",
+      "url_sha256": "7901e8ae7c7ee730b98d804e6c963bf265f3a86ace7c9be0610163fa525ca3fe"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "casinogamelifex.blogspot.com.ng",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-003585",
+      "url_sha256": "c26c84ec724d3d7348680345363635c7c5b9e1ab566bc213cebdf90b555b3304"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "www.grillitrestaurant.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-003802",
+      "url_sha256": "d15c7a5461b0e6c21bd8d1d6ff981a40d4b415a0294ebb30fd536c581258e3c5"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "boomsport.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS"
+      ],
+      "sample_id": "phiusiil-004340",
+      "url_sha256": "2662bef8f5085d6026b32d11e2aca0eb614cd9c0dbaa913ef31c02001a8127e1"
+    },
+    {
+      "after_score": 15,
+      "before_score": 55,
+      "domain": "storage.aimhinet.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Suspicious keyword detected: login"
+      ],
+      "sample_id": "phiusiil-004363",
+      "url_sha256": "cb89ce879f337838d02ad2117f958344768bd1d162af5b804c14c859be430645"
+    },
+    {
+      "after_score": 30,
+      "before_score": 70,
+      "domain": "walletconnectlive.blogspot.com",
+      "ground_truth": "phishing",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "URL does not use HTTPS",
+        "Suspicious keyword detected: wallet"
+      ],
+      "sample_id": "phiusiil-004471",
+      "url_sha256": "d8fd82e7017c7b1f6bcd173829e59d573930769b5bc5d3110fb61d7338c0ba90"
+    }
+  ],
+  "removed_false_positive_samples": [
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.saffronart.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000007",
+      "url_sha256": "484880c6210c311b31e0d226ef11279e1866f73b57d8da9cd96ebd813a0153a7"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.lanereport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000063",
+      "url_sha256": "6c1b0efb4d9b3cecc00f6285936e6c4d6e8b100d053c18d1047c8a43d36c59a2"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.spket.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000113",
+      "url_sha256": "9aa3dc8c3dd527b4db530871c977030a5f91117e0e2193368a8e25e2653c2955"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.gunsmokenet.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000118",
+      "url_sha256": "cc6d0302f8ae2a009e00beddbea0b2085c3e19c734d505cd489035a8ad35c34e"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.areadevelopment.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000262",
+      "url_sha256": "f0cebeb0c1ecf87e6c11d659d590f5587dccda5a9911bace5899fb6e8ed39d7f"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.affenknecht.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000380",
+      "url_sha256": "b6cbb403b8acd702b762fcd384501063b372593ebe1eabb154f377df3b323c67"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.boortmalt.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000396",
+      "url_sha256": "5de0ea281474928139a9c0e4a72c9cc045d0b12f7808aa98b3567d5c31c7f233"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.balkaninstitut.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000451",
+      "url_sha256": "410339940552d6dfeb8ba4f16a76f348c77a2ce825fde665d29141b22dfdbc7c"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.kladionicabet.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000505",
+      "url_sha256": "356e46f934c343b87c69c521d2e64f84beb7272b89d0b9073c37334771f89a1d"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.nma-fallout.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000513",
+      "url_sha256": "b8cf8c09237949ce8e5dadd72b4a91be973a2b9016657dccd9de1b5bda418dae"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.fay-west.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000547",
+      "url_sha256": "7265cf6394755e68d0684e1d40eaea3a44efac21c5e8e73665c757715e5af93b"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.waynemadsenreport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000586",
+      "url_sha256": "935ceb681d1b55cab52178b0fb9feb2010bccaf9b4385a087400da6cc0ae254c"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.doverport.co.uk",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000651",
+      "url_sha256": "7139492f68100e45f1d33fdd163450da291af0c2264d95665599631648d72ebc"
+    },
+    {
+      "after_score": 10,
+      "before_score": 50,
+      "domain": "www.goldstandard-gamsat.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [
+        "Hyphenated URL detected"
+      ],
+      "sample_id": "phiusiil-000679",
+      "url_sha256": "c5808fa105fb933dbc336bdc6f19e261ae0b7aca1b20024e4361781191cb5b60"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.mrbreakfast.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000726",
+      "url_sha256": "5f66cc98a84b33cb04699b97e69a221530ed09a670bb638cfd0dd29114a5083d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.venuereport.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-000786",
+      "url_sha256": "cd79e66c34de70fa826f8e4ac7c71afeee027812f709536ea53891789807752d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.hanbit.co.kr",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001021",
+      "url_sha256": "a2ce2bb6c48bfe6864026d718fcee1f4b046e8c6ae550286293d032c762730b4"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.dechert.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001046",
+      "url_sha256": "6288521a3de557ca4839ba2ac4997fd418a4d634a82829c4817845aca475c76d"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.istockanalyst.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001112",
+      "url_sha256": "abe2098c07f2abe9ed9aa556cb25bc08987a533f683f4ea32b0b90ddf06a0755"
+    },
+    {
+      "after_score": 0,
+      "before_score": 40,
+      "domain": "www.matchaeologist.com",
+      "ground_truth": "benign",
+      "new_shortener_matches": [],
+      "reasons_after": [],
+      "sample_id": "phiusiil-001177",
+      "url_sha256": "8d61ffbf1a7222f33e4f3189fb35afeac6b3e2d9adb55d40ba0f4d3c45e88d02"
+    }
+  ]
+}

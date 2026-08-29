@@ -1,0 +1,17 @@
+{
+  "label": "H5 Final HTML Detector",
+  "phishing_detector_sha256": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+  "risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "screening_threshold": 10,
+  "high_risk_threshold": 70,
+  "production_code_changed_in_h5c": false,
+  "holdout_used": false,
+  "html_signals": [
+    {"condition": "Configured suspicious phrase occurs in HTML", "score": 5, "reason": "Suspicious keyword detected: <keyword>", "method": "case-insensitive substring"},
+    {"condition": "Password input exists", "score": 20, "reason": "Password input field detected", "method": "BeautifulSoup input type=password"},
+    {"condition": "Password-containing form action resolves to a different hostname", "score": 10, "reason": "Credential form submits to an external destination", "method": "urljoin/urlsplit hostname comparison"},
+    {"condition": "Password-containing form local text contains configured credential phrase", "score": 10, "reason": "Credential verification language detected", "method": "normalized form-local phrase matching"},
+    {"condition": "Actual iframe element exists", "score": 10, "reason": "iframe detected", "method": "BeautifulSoup structural lookup"},
+    {"condition": "Executable script text contains eval call", "score": 15, "reason": "Potentially dangerous JavaScript detected", "method": "script-scoped regex; non-executable JSON types skipped"}
+  ]
+}

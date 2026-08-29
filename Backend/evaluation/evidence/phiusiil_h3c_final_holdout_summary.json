@@ -1,0 +1,155 @@
+{
+  "baseline_policy_40": {
+    "accuracy": 0.5994430229434965,
+    "balanced_accuracy": 0.5383262752783312,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 38974,
+        "ground_truth_phishing": 26854
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 1481,
+        "ground_truth_phishing": 3430
+      }
+    },
+    "f1": 0.19491405029123454,
+    "false_negative_rate": 0.8867388720116233,
+    "false_positive_rate": 0.03660857743171425,
+    "fn": 26854,
+    "fp": 1481,
+    "precision": 0.6984320912237834,
+    "recall": 0.1132611279883767,
+    "specificity": 0.9633914225682858,
+    "tn": 38974,
+    "total": 70739,
+    "tp": 3430
+  },
+  "baseline_policy_70": {
+    "accuracy": 0.576937757107112,
+    "balanced_accuracy": 0.5059149563426759,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 40450,
+        "ground_truth_phishing": 29922
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 5,
+        "ground_truth_phishing": 362
+      }
+    },
+    "f1": 0.02362076278098594,
+    "false_negative_rate": 0.9880464931977282,
+    "false_positive_rate": 0.00012359411692003462,
+    "fn": 29922,
+    "fp": 5,
+    "precision": 0.9863760217983651,
+    "recall": 0.011953506802271826,
+    "specificity": 0.9998764058830799,
+    "tn": 40450,
+    "total": 70739,
+    "tp": 362
+  },
+  "class_counts": {
+    "benign": 40455,
+    "phishing": 30284
+  },
+  "cross_partition_duplicate_leakage": 0,
+  "experiment": "H3C FINAL HOLDOUT EVALUATION",
+  "final_metrics": {
+    "policy_10": {
+      "accuracy": 0.8632154822657939,
+      "balanced_accuracy": 0.8587713945685291,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 35992,
+          "ground_truth_phishing": 5213
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 4463,
+          "ground_truth_phishing": 25071
+        }
+      },
+      "f1": 0.8382426694306061,
+      "false_negative_rate": 0.17213710210011887,
+      "false_positive_rate": 0.11032010876282289,
+      "fn": 5213,
+      "fp": 4463,
+      "precision": 0.84888602966073,
+      "recall": 0.8278628978998811,
+      "specificity": 0.8896798912371771,
+      "tn": 35992,
+      "total": 70739,
+      "tp": 25071
+    },
+    "policy_70": {
+      "accuracy": 0.575198970864728,
+      "balanced_accuracy": 0.5038634262316735,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 40455,
+          "ground_truth_phishing": 30050
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 0,
+          "ground_truth_phishing": 234
+        }
+      },
+      "f1": 0.015335212006029228,
+      "false_negative_rate": 0.992273147536653,
+      "false_positive_rate": 0.0,
+      "fn": 30050,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.007726852463346982,
+      "specificity": 1.0,
+      "tn": 40455,
+      "total": 70739,
+      "tp": 234
+    }
+  },
+  "generalization_gap": [
+    {
+      "development": 0.8489181507047973,
+      "holdout": 0.84888602966073,
+      "holdout_minus_development": -3.212104406724592e-05,
+      "metric": "precision"
+    },
+    {
+      "development": 0.8284343555851177,
+      "holdout": 0.8278628978998811,
+      "holdout_minus_development": -0.0005714576852365871,
+      "metric": "recall"
+    },
+    {
+      "development": 0.8385511792976501,
+      "holdout": 0.8382426694306061,
+      "holdout_minus_development": -0.0003085098670440045,
+      "metric": "f1"
+    },
+    {
+      "development": 0.11036601514910747,
+      "holdout": 0.11032010876282289,
+      "holdout_minus_development": -4.590638628458599e-05,
+      "metric": "false_positive_rate"
+    },
+    {
+      "development": 0.8590341702180051,
+      "holdout": 0.8587713945685291,
+      "holdout_minus_development": -0.0002627756494759659,
+      "metric": "balanced_accuracy"
+    }
+  ],
+  "high_risk_threshold": 70,
+  "holdout_locked_before_evaluation": true,
+  "holdout_touched_only_for_final_evaluation": true,
+  "limitations": [
+    "URL-only evaluation; redirect-dependent behavior is unavailable because original_url equals final_url.",
+    "This is not a full webpage/sandbox detection accuracy evaluation."
+  ],
+  "main_py_sha256": "c1afbfac1c95406642d13132ae8ba3bc56f2a74127157c5e7ed04adc1d0d78d6",
+  "post_holdout_tuning": false,
+  "risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "rows": 70739,
+  "screening_threshold": 10,
+  "url_only_method": "analyze_url(url, url); no network access"
+}

@@ -1,0 +1,17 @@
+{
+  "after_scan_containers": [],
+  "before_scan_containers": [],
+  "captured_at": "2026-08-11T20:14:36.678935+00:00",
+  "error_type": null,
+  "final_url": "https://example.com/",
+  "observed_container_names": [
+    "qrshield-scan-78541ecb-f27f-483d-955a-cc1bf20f9240"
+  ],
+  "observed_network_memberships": {
+    "qrshield-scan-78541ecb-f27f-483d-955a-cc1bf20f9240": [
+      "qrshield-worker-isolated"
+    ]
+  },
+  "scan_status": "success",
+  "title": "Example Domain"
+}

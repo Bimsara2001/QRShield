@@ -1,0 +1,599 @@
+{
+    "title":  "QRShield Final Proposal Compliance Matrix and Evidence Index",
+    "audit_type":  "documentation_audit_and_scoped_privacy_control_implementation",
+    "overall_status":  "PARTIAL",
+    "status_totals":  {
+                            "COMPLETE":  41,
+                          "PARTIAL":  0,
+                            "IN PROGRESS":  0,
+                          "OUTSTANDING":  1,
+                          "NOT_APPLICABLE":  0
+                      },
+    "detector_integrity":  {
+                               "analyzer/risk_engine.py":  {
+                                                               "expected_sha256":  "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+                                                               "actual_sha256":  "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+                                                               "status":  "MATCH"
+                                                           },
+                               "detectors/phishing_detector.py":  {
+                                                                      "expected_sha256":  "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+                                                                      "actual_sha256":  "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+                                                                      "status":  "MATCH"
+                                                                  }
+                           },
+    "final_metrics":  {
+                          "h3c_phiusiil_url_holdout":  {
+                                                           "scope":  "Frozen URL-only holdout; phishing if score \u003e= 10.",
+                                                           "total":  70739,
+                                                           "phishing":  30284,
+                                                           "legitimate":  40455,
+                                                           "tp":  25071,
+                                                           "tn":  35992,
+                                                           "fp":  4463,
+                                                           "fn":  5213,
+                                                           "accuracy":  0.863215,
+                                                           "precision":  0.848886,
+                                                           "recall":  0.827863,
+                                                           "specificity":  0.889680,
+                                                           "false_positive_rate":  0.110320,
+                                                           "false_negative_rate":  0.172137,
+                                                           "f1":  0.838243
+                                                       },
+                          "independent_synthetic_offline_full_pipeline":  {
+                                                                              "scope":  "Static local synthetic fixtures; no browser, sandbox, or network.",
+                                                                              "total":  50,
+                                                                              "phishing_like":  25,
+                                                                              "benign":  25,
+                                                                              "tp":  21,
+                                                                              "tn":  20,
+                                                                              "fp":  5,
+                                                                              "fn":  4,
+                                                                              "accuracy":  0.82,
+                                                                              "precision":  0.8076923076923077,
+                                                                              "recall":  0.84,
+                                                                              "specificity":  0.8,
+                                                                              "false_positive_rate":  0.2,
+                                                                              "false_negative_rate":  0.16,
+                                                                              "f1":  0.8235294117647058
+                                                                          },
+                          "external_url_generalizability":  {
+                                                                "scope":  "Balanced PhishTank/Tranco URL-text-only validation; Tranco is a legitimate proxy.",
+                                                                "total":  20000,
+                                                                "phishing":  10000,
+                                                                "legitimate_proxy":  10000,
+                                                                "tp":  7352,
+                                                                "tn":  9076,
+                                                                "fp":  924,
+                                                                "fn":  2648,
+                                                                "accuracy":  0.8214,
+                                                                "precision":  0.88835186080232,
+                                                                "recall":  0.7352,
+                                                                "specificity":  0.9076,
+                                                                "false_positive_rate":  0.0924,
+                                                                "false_negative_rate":  0.2648,
+                                                                "f1":  0.8045524184723133
+                                                            },
+                          "latency_safe_live":  {
+                                                    "successful_scans":  50,
+                                                    "mean_seconds":  4.35420774,
+                                                    "median_seconds":  4.221345,
+                                                    "p95_seconds":  5.920358
+                                                },
+                          "regression":  {
+                                             "command":  "venv\\Scripts\\python.exe -m pytest tests -q -p no:cacheprovider",
+                                             "result":  "176 passed"
+                                         }
+                      },
+    "requirements":  [
+                         {
+                             "id":  "A1",
+                             "requirement":  "QR scanning",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source/test audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/scan_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Participant usability evidence absent."
+                         },
+                         {
+                             "id":  "A2",
+                             "requirement":  "URL extraction from scanned QR",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/scan_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Depends on decoded QR content."
+                         },
+                         {
+                             "id":  "A3",
+                             "requirement":  "Manual URL analysis",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/services/api_service.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Backend availability dependent."
+                         },
+                         {
+                             "id":  "A4",
+                             "requirement":  "Risk result presentation",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/result_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No participant usability evidence."
+                         },
+                         {
+                             "id":  "B1",
+                             "requirement":  "Lexical/structural URL analysis",
+                             "implementation_status":  "frozen implementation",
+                             "evaluation_status":  "unit, H3C, external",
+                             "evidence":  [
+                                              "analyzer/risk_engine.py",
+                                              "tests/test_risk_engine.py"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Lexical-only signals."
+                         },
+                         {
+                             "id":  "B2",
+                             "requirement":  "URL phishing/legitimate classification",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H3C and external matrices",
+                             "evidence":  [
+                                              "evaluation/evidence/phiusiil_h3c_final_holdout_summary.json",
+                                              "evaluation/evidence/external_generalization_summary.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not HTML/sandbox classification."
+                         },
+                         {
+                             "id":  "B3",
+                             "requirement":  "Frozen score \u003e= 10 policy",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "hash/evaluation verified",
+                             "evidence":  [
+                                              "tests/test_controlled_ui_test_endpoint.py"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "High-Risk boundary is distinct."
+                         },
+                         {
+                             "id":  "B4",
+                             "requirement":  "Labelled URL holdout",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "N=70,739",
+                             "evidence":  [
+                                              "evaluation/evidence/phiusiil_h3c_final_holdout_summary.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "PhiUSIIL URL-only."
+                         },
+                         {
+                             "id":  "C1",
+                             "requirement":  "HTML phishing indicators",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "unit/H5C",
+                             "evidence":  [
+                                              "detectors/phishing_detector.py",
+                                              "tests/test_phishing_detector.py"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Heuristic scope."
+                         },
+                         {
+                             "id":  "C2",
+                             "requirement":  "Credential/password detection",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H5C",
+                             "evidence":  [
+                                              "evaluation/evidence/h5c_html_detector_freeze.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Password inputs may be legitimate."
+                         },
+                         {
+                             "id":  "C3",
+                             "requirement":  "Iframe/form indicators",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H5C",
+                             "evidence":  [
+                                              "evaluation/evidence/h5c_html_detector_freeze.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not eTLD+1-aware."
+                         },
+                         {
+                             "id":  "C4",
+                             "requirement":  "Controlled HTML validation",
+                             "implementation_status":  "complete corpus",
+                             "evaluation_status":  "26/26 checks",
+                             "evidence":  [
+                                              "evaluation/html/H5_FINAL_EVALUATION.md"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not independent HTML accuracy."
+                         },
+                         {
+                             "id":  "D1",
+                             "requirement":  "VirusTotal integration",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "integration code/tests",
+                             "evidence":  [
+                                              "threat_intel/virustotal.py",
+                                              "tests/test_scan_sandbox_integration.py"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Supplementary intelligence."
+                         },
+                         {
+                             "id":  "D2",
+                             "requirement":  "External-intelligence failure handling",
+                             "implementation_status":  "returns structured error object",
+                             "evaluation_status":  "controlled no-network checks cover non-200 and exception paths; scan continues with a VirusTotal error result",
+                             "evidence":  [
+                                                "threat_intel/virustotal.py",
+                                                "evaluation/evidence/external_intelligence_failure_handling_evidence.json"
+                                             ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No availability/retry guarantee; exception-detail sanitization is not claimed."
+                         },
+                         {
+                             "id":  "E1",
+                             "requirement":  "Sandbox/container isolation",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "unit/H6",
+                             "evidence":  [
+                                              "services/sandbox_runner.py",
+                                              "evaluation/evidence/h6_operational_checks.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Bounded operational evidence."
+                         },
+                         {
+                             "id":  "E2",
+                             "requirement":  "Private/internal destination blocking",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "unit/H6",
+                             "evidence":  [
+                                              "security/url_validator.py",
+                                              "tests/test_sandbox_network_guard.py"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not certification."
+                         },
+                         {
+                             "id":  "E3",
+                             "requirement":  "Redirect normalization/security",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "unit/H6",
+                             "evidence":  [
+                                              "tests/test_risk_engine.py",
+                                              "evaluation/evidence/h6_precheck_www_redirect_precision.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Only www canonicalization equivalent."
+                         },
+                         {
+                             "id":  "E4",
+                             "requirement":  "Worker cleanup",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H6 zero workers",
+                             "evidence":  [
+                                              "evaluation/evidence/h6_operational_checks.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Bounded sample."
+                         },
+                         {
+                             "id":  "E5",
+                             "requirement":  "Screenshot isolation/delivery",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "unit/H6",
+                             "evidence":  [
+                                              "tests/test_scan_sandbox_integration.py",
+                                              "evaluation/evidence/h6_operational_checks.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Localhost asset URL caveat."
+                         },
+                         {
+                             "id":  "F1",
+                             "requirement":  "MongoDB persistence",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H6 manual verification",
+                             "evidence":  [
+                                              "main.py",
+                                              "evaluation/evidence/h6_operational_checks.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not durability/load benchmark."
+                         },
+                         {
+                             "id":  "F2",
+                             "requirement":  "Scan history",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "main.py",
+                                              "Frontend/qrshield_app/lib/screens/history_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Database dependent."
+                         },
+                         {
+                             "id":  "F3",
+                             "requirement":  "History clearing",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "main.py",
+                                              "Frontend/qrshield_app/lib/services/history_service.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No retention policy evidence."
+                         },
+                         {
+                             "id":  "G1",
+                             "requirement":  "Dashboard",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/dashboard_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No usability study."
+                         },
+                         {
+                             "id":  "G2",
+                             "requirement":  "QR scanner UI",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/scan_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No usability study."
+                         },
+                         {
+                             "id":  "G3",
+                             "requirement":  "Manual URL UI",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/scan_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No usability study."
+                         },
+                         {
+                             "id":  "G4",
+                             "requirement":  "Result UI",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/result_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No usability study."
+                         },
+                         {
+                             "id":  "G5",
+                             "requirement":  "Destination preview",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/result_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Informational only."
+                         },
+                         {
+                             "id":  "G6",
+                             "requirement":  "History UI",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/history_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "No usability study."
+                         },
+                         {
+                             "id":  "G7",
+                             "requirement":  "Settings/backend status",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/settings_screen.dart",
+                                              "Frontend/qrshield_app/lib/services/health_service.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Environment dependent."
+                         },
+                         {
+                             "id":  "G8",
+                             "requirement":  "Low-Risk display",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "source audit",
+                             "evidence":  [
+                                              "Frontend/qrshield_app/lib/screens/result_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Not an accuracy claim."
+                         },
+                         {
+                             "id":  "G9",
+                             "requirement":  "Controlled High-Risk display with debug/release separation",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "dedicated endpoint tests",
+                             "evidence":  [
+                                              "tests/test_controlled_ui_test_endpoint.py",
+                                              "Frontend/qrshield_app/lib/screens/settings_screen.dart"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Inert local control only."
+                         },
+                         {
+                             "id":  "H1",
+                             "requirement":  "H3C holdout metrics/matrix",
+                             "implementation_status":  "evidence complete",
+                             "evaluation_status":  "frozen final",
+                             "evidence":  [
+                                              "evaluation/evidence/phiusiil_h3c_final_holdout_summary.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "URL-only."
+                         },
+                         {
+                             "id":  "H2",
+                             "requirement":  "Latency \u003e= 50 scans",
+                             "implementation_status":  "evidence complete",
+                             "evaluation_status":  "50 safe-live successes",
+                             "evidence":  [
+                                              "evaluation/evidence/latency_summary_post_utf8_fix.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Safe targets/environment."
+                         },
+                         {
+                             "id":  "H3",
+                             "requirement":  "Independent synthetic full-pipeline evaluation",
+                             "implementation_status":  "reproducible corpus/runner",
+                             "evaluation_status":  "N=50",
+                             "evidence":  [
+                                              "evaluation/evidence/full_pipeline_independent_summary.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Static synthetic HTML."
+                         },
+                         {
+                             "id":  "H4",
+                             "requirement":  "External generalizability validation",
+                             "implementation_status":  "reproducible feed/runner",
+                             "evaluation_status":  "N=20,000",
+                             "evidence":  [
+                                              "evaluation/evidence/external_generalization_summary.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Tranco benign proxy."
+                         },
+                         {
+                             "id":  "H5",
+                             "requirement":  "Independent labelled rendered-page/sandbox accuracy",
+                             "implementation_status":  "detector/sandbox exist",
+                             "evaluation_status":  "no qualifying corpus; controlled H5 fixtures and static synthetic full-pipeline cases do not render pages or exercise sandbox",
+                             "evidence":  [
+                                                "evaluation/FINAL_RESEARCH_METRICS_LOCK.md",
+                                                "evaluation/FINAL_REMAINING_GAPS_AUDIT.md"
+                                          ],
+                             "final_status":  "OUTSTANDING",
+                             "limitations":  "Do not infer from H6 or static fixtures."
+                         },
+                         {
+                             "id":  "H6",
+                             "requirement":  "Nielsen usability study with \u003e= 5 participants",
+                              "implementation_status":  "final anonymized Google Forms responses imported",
+                              "evaluation_status":  "five valid participants completed T1-T9; all ten Nielsen items analyzed and preserved",
+                              "evidence":  [
+                                                "evaluation/FINAL_USABILITY_EVALUATION.md",
+                                                "evaluation/evidence/usability/final_usability_summary.json",
+                                                "evaluation/evidence/usability/final_usability_task_results.csv",
+                                                "evaluation/evidence/usability/final_usability_nielsen_results.csv"
+                                            ],
+                              "final_status":  "COMPLETE",
+                              "limitations":  "Controlled N=5 convenience/usability sample; descriptive and not population-generalizable."
+                         },
+                         {
+                             "id":  "I1",
+                             "requirement":  "No intentional live phishing browsing in controlled evaluation",
+                             "implementation_status":  "safe procedures documented",
+                             "evaluation_status":  "H5/H6/full-pipeline/external",
+                             "evidence":  [
+                                              "evaluation/H6_FINAL_INTEGRATED_EVALUATION.md",
+                                              "evaluation/EXTERNAL_GENERALIZABILITY_VALIDATION.md"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Feed files are URL data, not page retrieval."
+                         },
+                         {
+                             "id":  "I2",
+                             "requirement":  "Synthetic/local phishing fixtures",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "H5/full-pipeline",
+                             "evidence":  [
+                                              "evaluation/html/fixtures",
+                                              "evaluation/full_pipeline"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Non-operational synthetic material."
+                         },
+                         {
+                             "id":  "I3",
+                             "requirement":  "Redacted external errors",
+                             "implementation_status":  "implemented",
+                             "evaluation_status":  "all errors recorded",
+                             "evidence":  [
+                                              "evaluation/evidence/external_generalization_error_analysis.json"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Full local results retained for reproducibility."
+                         },
+                         {
+                             "id":  "I4",
+                             "requirement":  "Privacy/minimal personal-data approach",
+                             "implementation_status":  "environment-only service configuration, token-protected sensitive routes, safe screenshot lifecycle, user controls, and disclosure implemented",
+                             "evaluation_status":  "focused privacy tests cover missing optional secret, token guard, screenshot access, Clear History cleanup, traversal rejection, cleanup failure, retention, and source-secret absence",
+                             "evidence":  [
+                                                "evaluation/PRIVACY_AND_DATA_HANDLING_EVIDENCE.md",
+                                                "evaluation/PRIVACY_AND_DATA_HANDLING_NOTICE.md",
+                                                "evaluation/evidence/privacy/data_handling_evidence.json",
+                                                "tests/test_privacy_controls.py"
+                                             ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Shared-token boundary is not enterprise authentication; historical credential rotation remains a required manual operational action."
+                         },
+                         {
+                             "id":  "I5",
+                             "requirement":  "Documented limitations",
+                             "implementation_status":  "reports present",
+                             "evaluation_status":  "multiple final reports",
+                             "evidence":  [
+                                              "evaluation/FINAL_RESEARCH_METRICS_LOCK.md",
+                                              "evaluation/EXTERNAL_GENERALIZABILITY_VALIDATION.md"
+                                          ],
+                             "final_status":  "COMPLETE",
+                             "limitations":  "Boundaries remain binding."
+                         }
+                     ],
+    "remaining_work":  [
+                           {
+                               "priority":  "P1",
+                               "task":  "If claiming rendered-page/sandbox accuracy, evaluate an independently labelled safely handled rendered-page corpus without tuning.",
+                               "basis":  "H5 is outstanding."
+                           }
+                       ],
+    "claim_boundaries":  {
+                             "can_claim":  [
+                                               "Measured H3C URL-only holdout performance.",
+                                               "Measured external URL-text generalizability performance.",
+                                                "Measured synthetic offline full-pipeline-function performance.",
+                                                "Measured 50 safe-live latency scans and bounded H6 operational/security checks.",
+                                                "Observed task completion and self-reported usability ratings in the documented controlled N=5 usability evaluation.",
+                                                "Controlled inert High-Risk UI path and 169-test current regression audit."
+                                           ],
+                             "cannot_claim":  [
+                                                  "100% phishing detection or zero false positives.",
+                                                  "Real-world full-pipeline accuracy equal to the synthetic evaluation.",
+                                                  "That Tranco domains are individually benign-certified or the balanced external sample represents prevalence.",
+                                                   "Population-generalizable usability, formal privacy compliance, or security certification."
+                                              ]
+                         },
+    "production_code_changed_by_audit":  true
+}

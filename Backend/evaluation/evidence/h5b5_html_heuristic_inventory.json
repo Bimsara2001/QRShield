@@ -1,0 +1,55 @@
+{
+  "implementation": "Backend/detectors/phishing_detector.py",
+  "url_lexical_detector_used": false,
+  "neutral_url_note": "No URL scoring was run; fixture results are HTML-only.",
+  "heuristics": [
+    {
+      "condition": "Any configured suspicious keyword is a substring of lower-case HTML",
+      "score_added": 5,
+      "reason": "Suspicious keyword detected: <keyword>",
+      "parsing": "raw lower-case substring"
+    },
+    {
+      "condition": "One or more form elements exist",
+      "score_added": 10,
+      "reason": "Page contains HTML forms",
+      "parsing": "BeautifulSoup find_all('form')"
+    },
+    {
+      "condition": "One or more input elements have type=password",
+      "score_added": 20,
+      "reason": "Password input field detected",
+      "parsing": "BeautifulSoup find_all('input', {'type': 'password'})"
+    },
+    {
+      "condition": "A password-containing form includes a configured credential phrase in its local text",
+      "score_added": 10,
+      "reason": "Credential verification language detected",
+      "parsing": "form text normalized for explicit phrase matching"
+    },
+    {
+      "condition": "An iframe element exists",
+      "score_added": 10,
+      "reason": "iframe detected",
+      "parsing": "BeautifulSoup find('iframe')"
+    },
+    {
+      "condition": "The lower-case HTML contains the substring eval(",
+      "score_added": 15,
+      "reason": "Potentially dangerous JavaScript detected",
+      "parsing": "raw lower-case substring"
+    }
+  ],
+  "suspicious_keywords": [
+    "verify your account",
+    "bank login",
+    "credit card",
+    "password reset",
+    "confirm identity",
+    "security alert",
+    "urgent action required",
+    "claim reward",
+    "free money",
+    "limited time offer"
+  ]
+}

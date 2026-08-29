@@ -1,0 +1,15 @@
+# Disposable H5-only worker. It inherits the frozen worker and adds just the
+# Ubuntu-supported NSS administration tool needed to create a local Chromium
+# trust database at evaluation runtime. It is never tagged as, or used by,
+# qrshield-sandbox-worker:latest.
+FROM qrshield-sandbox-worker:latest
+
+USER root
+RUN apt-get update \
+    && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libnss3-tools \
+    && rm -rf /var/lib/apt/lists/*
+COPY h5_eval_worker_entrypoint.sh /usr/local/bin/h5-eval-worker
+RUN chmod 0555 /usr/local/bin/h5-eval-worker
+
+USER qrshield
+ENTRYPOINT ["/usr/local/bin/h5-eval-worker"]

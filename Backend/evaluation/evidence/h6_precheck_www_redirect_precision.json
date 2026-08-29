@@ -1,0 +1,73 @@
+{
+  "change": "H6 precheck: conventional www hostname canonicalization for redirect-risk comparison only",
+  "scope": {
+    "production_file_changed": "Backend/analyzer/risk_engine.py",
+    "production_change": "After existing hostname case and trailing-dot normalization, strip only a leading conventional www. prefix for redirect comparison.",
+    "not_normalized": [
+      "arbitrary subdomains",
+      "scheme",
+      "non-default ports",
+      "meaningful paths",
+      "query strings"
+    ],
+    "unchanged": [
+      "SCREENING_THRESHOLD = 10",
+      "HIGH_RISK_THRESHOLD = 70",
+      "other lexical heuristic weights",
+      "phishing_detector.py",
+      "sandbox/security",
+      "VirusTotal",
+      "MongoDB",
+      "Flutter"
+    ]
+  },
+  "risk_engine_sha256": {
+    "old": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+    "new": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1"
+  },
+  "regression_tests": {
+    "command": "venv\\Scripts\\python.exe -m pytest tests -q -p no:cacheprovider",
+    "backend_test_count": 162,
+    "result": "162 passed",
+    "redirect_coverage": [
+      "bare domain to www domain: no redirect score",
+      "www domain to bare domain: no redirect score",
+      "case plus www normalization: no redirect score",
+      "unrelated host: redirect score +10",
+      "arbitrary subdomain change: redirect score +10",
+      "meaningful path and query changes: existing redirect behavior retained"
+    ]
+  },
+  "live_scan_regression": [
+    {
+      "input_url": "https://google.com",
+      "status": "success",
+      "final_url": "https://www.google.com/",
+      "risk_score": 0,
+      "verdict": "Low Risk",
+      "redirect_reason_present": false
+    },
+    {
+      "input_url": "https://example.com",
+      "status": "success",
+      "final_url": "https://example.com/",
+      "risk_score": 0,
+      "verdict": "Low Risk",
+      "redirect_reason_present": false
+    },
+    {
+      "input_url": "https://www.wikipedia.org",
+      "status": "success",
+      "final_url": "https://www.wikipedia.org/",
+      "risk_score": 0,
+      "verdict": "Low Risk",
+      "redirect_reason_present": false
+    }
+  ],
+  "h3c": {
+    "metrics_recomputed": false,
+    "metrics_tuned": false,
+    "reason": "H3C used analyze_url(url, url), so redirect-dependent scoring was outside that offline evaluation."
+  },
+  "h6_continued": false
+}

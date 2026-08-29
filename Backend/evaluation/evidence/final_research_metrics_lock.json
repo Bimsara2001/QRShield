@@ -1,0 +1,114 @@
+{
+  "report": "QRShield Final Research Metrics Lock",
+  "scope": "Consolidation of frozen evidence only; no tuning, rescoring, or live scanning performed.",
+  "url_detection_h3c": {
+    "dataset": "PhiUSIIL Phishing URL (Website)",
+    "method": "offline analyze_url(url, url); no network access",
+    "selected_policy": "score >= 10 predicts phishing",
+    "high_risk_ui_policy": "score >= 70",
+    "holdout": {
+      "rows": 70739,
+      "phishing": 30284,
+      "benign": 40455,
+      "locked_before_final_evaluation": true,
+      "post_holdout_tuning": false,
+      "cross_partition_duplicate_leakage": 0
+    },
+    "confusion_matrix": {
+      "true_positive": 25071,
+      "true_negative": 35992,
+      "false_positive": 4463,
+      "false_negative": 5213
+    },
+    "metrics": {
+      "accuracy": 0.8632154822657939,
+      "precision": 0.84888602966073,
+      "recall_true_positive_rate": 0.8278628978998811,
+      "specificity_true_negative_rate": 0.8896798912371771,
+      "false_positive_rate": 0.11032010876282289,
+      "false_negative_rate": 0.17213710210011887,
+      "f1": 0.8382426694306061,
+      "balanced_accuracy": 0.8587713945685291
+    },
+    "limitations": [
+      "URL-only evaluation; redirect-dependent behavior is unavailable because original_url equals final_url.",
+      "Not a full webpage, sandbox, or rendered-HTML detection accuracy evaluation."
+    ]
+  },
+  "dataset_methodology": {
+    "source": "UCI Machine Learning Repository dataset 967, PhiUSIIL Phishing URL (Website)",
+    "source_rows": 235795,
+    "source_labels": {"0": "phishing", "1": "legitimate/benign"},
+    "split": {"seed": 2026, "development_target_fraction": 0.7, "holdout_target_fraction": 0.3},
+    "development": {"rows": 165056, "phishing": 70661, "legitimate": 94395},
+    "deduplication_and_filtering": {
+      "grouping_key": "exact raw URL string",
+      "unique_url_groups": 235370,
+      "duplicate_occurrences_beyond_first": 425,
+      "duplicate_groups": 425,
+      "cross_partition_duplicate_leakage": 0,
+      "recorded_row_filtering": "none"
+    }
+  },
+  "html_detector_h5c": {
+    "evaluation_type": "controlled fixture validation, not labelled HTML-dataset accuracy",
+    "fixture_count": 26,
+    "intent_counts": {"BENIGN": 14, "SUSPICIOUS_CONTROLLED": 10, "ADDITIONAL_CONTROL": 2},
+    "fixture_specific_expected_outcomes_passed": 26,
+    "fixture_expectation_failures": 0,
+    "conventional_accuracy_precision_recall_valid": false,
+    "limitations": [
+      "No independent labelled HTML dataset evaluated.",
+      "Small manually defined credential-language phrase list.",
+      "Hostname rather than eTLD+1-aware external-form comparison.",
+      "Regex-based eval detection rather than JavaScript parsing.",
+      "Password fields and iframe presence alone do not prove phishing."
+    ]
+  },
+  "latency_post_utf8_fix": {
+    "measurement": "overall_fastapi_scan_latency_seconds_post_utf8_fix",
+    "safe_targets": ["https://example.com", "https://www.wikipedia.org", "https://www.python.org", "https://www.iana.org"],
+    "scans": 50,
+    "successful_scans": 50,
+    "failed_scans": 0,
+    "mean_seconds": 4.35420774,
+    "median_seconds": 4.221345,
+    "minimum_seconds": 2.936825,
+    "maximum_seconds": 12.442203,
+    "p95_nearest_rank_seconds": 5.920358,
+    "standard_deviation_seconds": 1.3804447765530514,
+    "proposal_minimum_50_cases": "COMPLETE"
+  },
+  "h6_operational_validation": {
+    "scope": "Safe-live operational evidence only; not phishing accuracy evidence.",
+    "safe_live_scans": {"status": "PASS", "count": 5},
+    "screenshot_delivery": "PASS",
+    "mongodb_persistence": "PASS",
+    "ephemeral_docker_worker_cleanup": "PASS",
+    "private_target_fail_closed": "PASS",
+    "docker_infrastructure_recovery": "PASS",
+    "backend_regression_suite": {"status": "PASS", "result": "162 passed"}
+  },
+  "integrity": {
+    "current_sha256": {
+      "analyzer/risk_engine.py": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+      "detectors/phishing_detector.py": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+      "main.py": "409949d3d2d8858fe0dae05e731e6075bb699821644dfab2d5344edc1a185e76"
+    },
+    "latest_frozen_reference_sha256": {
+      "analyzer/risk_engine.py": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+      "detectors/phishing_detector.py": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a",
+      "main.py": "49b4c37aac0300a9c31793fd7675e8f363bd19ebdb3186ba89a3042401ab2ab4"
+    },
+    "comparison": {"risk_engine": "MATCH", "phishing_detector": "MATCH", "main": "DIFFERENT_RECORDED_ONLY"}
+  },
+  "proposal_evaluation_status": {
+    "frozen_url_only_holdout_metrics": "COMPLETE",
+    "controlled_html_heuristic_validation": "PARTIAL",
+    "latency_at_least_50_cases": "COMPLETE",
+    "safe_live_integrated_operational_validation": "COMPLETE",
+    "full_rendered_page_or_sandbox_phishing_accuracy": "OUTSTANDING",
+    "real_world_generalizability": "OUTSTANDING",
+    "overall": "PARTIAL"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "captured_at": "2026-08-11T20:15:15.027088+00:00",
+  "final_url": "https://example.com/",
+  "mongodb_history_record_present": true,
+  "response_keys_preserved": true,
+  "risk_score": 10,
+  "scan_worker_cleanup_confirmed": true,
+  "screenshot_http_status": 200,
+  "status": "success",
+  "title": "Example Domain",
+  "verdict": "Low Risk",
+  "virustotal_status": "success"
+}

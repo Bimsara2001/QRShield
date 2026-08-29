@@ -1,9 +1,21 @@
 import requests
 import base64
+import os
 
-API_KEY = "46e0e5433bab0d87af28e8279becd20b7f2d7b7b401c90356b256e8bf122f38f"
+API_KEY_ENV = "VIRUSTOTAL_API_KEY"
+
+
+def _api_key():
+    return os.environ.get(API_KEY_ENV, "").strip()
 
 def check_url_virustotal(url):
+
+    api_key = _api_key()
+    if not api_key:
+        return {
+            "status": "disabled",
+            "message": "VirusTotal integration is not configured"
+        }
 
     try:
 
@@ -12,7 +24,7 @@ def check_url_virustotal(url):
         ).decode().strip("=")
 
         headers = {
-            "x-apikey": API_KEY
+            "x-apikey": api_key
         }
 
         vt_url = f"https://www.virustotal.com/api/v3/urls/{url_id}"

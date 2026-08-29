@@ -1,0 +1,21 @@
+{
+  "experiment": "H5B2 external credential form signal",
+  "server": "current Backend venv on temporary port 8003",
+  "google": {
+    "status": "success",
+    "risk_score": 10,
+    "verdict": "Medium Risk",
+    "reasons": ["URL redirected to another address"],
+    "title": "Google",
+    "virustotal_status": "success"
+  },
+  "example_com": {
+    "status": "success",
+    "risk_score": 0,
+    "verdict": "Low Risk",
+    "reasons": [],
+    "title": "Example Domain",
+    "virustotal_status": "success"
+  },
+  "note": "Google's normal search form did not trigger the credential external-destination signal."
+}

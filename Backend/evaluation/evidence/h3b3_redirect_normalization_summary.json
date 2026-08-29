@@ -1,0 +1,73 @@
+{
+  "development_metrics": {
+    "policy_10": {
+      "accuracy": 0.8634342283830942,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 83977,
+          "ground_truth_phishing": 12123
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 10418,
+          "ground_truth_phishing": 58538
+        }
+      },
+      "f1": 0.8385511792976501,
+      "false_negative_rate": 0.1715656444148823,
+      "false_positive_rate": 0.11036601514910747,
+      "fn": 12123,
+      "fp": 10418,
+      "precision": 0.8489181507047973,
+      "recall": 0.8284343555851177,
+      "specificity": 0.8896339848508925,
+      "tn": 83977,
+      "total": 165056,
+      "tp": 58538
+    },
+    "policy_70": {
+      "accuracy": 0.5749260856921288,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 94395,
+          "ground_truth_phishing": 70161
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 0,
+          "ground_truth_phishing": 500
+        }
+      },
+      "f1": 0.014052641193912396,
+      "false_negative_rate": 0.9929239608836558,
+      "false_positive_rate": 0.0,
+      "fn": 70161,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.007076039116344236,
+      "specificity": 1.0,
+      "tn": 94395,
+      "total": 165056,
+      "tp": 500
+    }
+  },
+  "development_only": true,
+  "experiment": "H3B3 redirect canonicalization fix",
+  "h3b2_development_metrics_unchanged": true,
+  "high_risk_threshold": 70,
+  "holdout_touched": false,
+  "new_h3b3_risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "previous_h3b1_risk_engine_sha256": "121b64d4826f01f604b75a1ac15e1aef1a6b492e2b5e80f29c3ffdeba2dbefa6",
+  "redirect_normalization": {
+    "fragments": "ignored because they are not sent to the server",
+    "network_access": false,
+    "normalized": [
+      "scheme casing",
+      "hostname casing",
+      "one trailing hostname dot",
+      "default http/https port",
+      "empty path versus '/'"
+    ],
+    "query_strings": "preserved and compared exactly"
+  },
+  "rows_evaluated": 165056,
+  "screening_threshold": 10
+}

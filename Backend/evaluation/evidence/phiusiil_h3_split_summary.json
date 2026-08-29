@@ -1,0 +1,30 @@
+{
+  "conflicting_duplicate_label_groups": 0,
+  "cross_partition_duplicate_count": 0,
+  "development_fraction_target": 0.7,
+  "duplicate_groups": 425,
+  "duplicate_url_occurrences_beyond_first": 425,
+  "holdout_fraction_target": 0.3,
+  "holdout_locked": true,
+  "holdout_policy": "Only aggregate frozen baseline metrics are written; no holdout samples, reasons, errors, or threshold sweeps are emitted.",
+  "manifest": "phiusiil_h3_split_manifest.csv",
+  "partitions": {
+    "development": {
+      "label_0_phishing": 70661,
+      "label_1_legitimate": 94395,
+      "rows": 165056
+    },
+    "holdout": {
+      "label_0_phishing": 30284,
+      "label_1_legitimate": 40455,
+      "rows": 70739
+    }
+  },
+  "raw_row_count": 235795,
+  "seed": 2026,
+  "target_holdout_rows_by_label": {
+    "0": 30284,
+    "1": 40455
+  },
+  "unique_url_groups": 235370
+}

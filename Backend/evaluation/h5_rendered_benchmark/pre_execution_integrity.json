@@ -1,0 +1,16 @@
+{
+  "benchmark_name": "Independent Synthetic Rendered-Page / Sandbox Benchmark",
+  "manifest_sha256": "c0a39dfbbba4b538a61b3f38e61a80d70f90987a661fb25bbe4d63ed67431dfa",
+  "case_count": 50,
+  "label_counts": {
+    "benign": 25,
+    "phishing": 25
+  },
+  "historical_h5_fixture_count": 26,
+  "direct_historical_content_duplicate_count": 0,
+  "direct_historical_content_duplicates": [],
+  "historical_case_id_collision_count": 0,
+  "historical_template_reuse_count": 0,
+  "independence_statement": "All cases were authored for this benchmark. Shared page shell is benchmark-only presentation boilerplate; no historical H5 fixture content, filename, or case ID was reused.",
+  "prediction_started": false
+}

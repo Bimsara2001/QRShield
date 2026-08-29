@@ -1,0 +1,11 @@
+fixture_id,h5b4_score,h5b5_score,h5b4_reasons,h5b5_reasons
+credential_phrase_no_password,5,5,Suspicious keyword detected: verify your account,Suspicious keyword detected: verify your account
+password_plain,20,20,Password input field detected,Password input field detected
+password_verify_phrase,25,35,Suspicious keyword + password,Suspicious keyword + password + Credential verification language detected
+password_confirm_phrase,20,30,Password input field detected,Password input field detected | Credential verification language detected
+external_credential_phrase,30,40,Password + external credential,Password + external credential + Credential verification language detected
+distant_credential_phrase,25,25,Suspicious keyword + password,Suspicious keyword + password
+benign_search,0,0,,
+benign_contact,0,0,,
+benign_newsletter,0,0,,
+fake_banking_login,45,45,Suspicious keywords + password + external credential,Suspicious keywords + password + external credential

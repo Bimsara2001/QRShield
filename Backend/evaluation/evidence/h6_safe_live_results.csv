@@ -1,0 +1,6 @@
+input_url,status,final_url,risk_score,verdict,reasons,virustotal_status,notes
+https://example.com,success,https://example.com/,0,Low Risk,[],success,"Safe-live integration result"
+https://google.com,success,https://www.google.com/,0,Low Risk,[],success,"Previous www canonical redirect false positive removed by the pre-H6 precision fix"
+https://www.wikipedia.org,success,https://www.wikipedia.org/,0,Low Risk,[],success,"Safe-live integration result"
+https://www.python.org,success,https://www.python.org/,0,Low Risk,[],success,"Safe-live integration result"
+https://www.iana.org,success,https://www.iana.org/,0,Low Risk,[],success,"Safe-live integration result"

@@ -1,0 +1,19 @@
+{
+  "count": 50,
+  "failed_scans": 13,
+  "maximum": 5.346972,
+  "mean": 3.45260972,
+  "measurement": "overall_fastapi_scan_latency_seconds",
+  "median": 3.404471,
+  "minimum": 2.288919,
+  "p90_nearest_rank": 4.451428,
+  "p95_nearest_rank": 4.995195,
+  "standard_deviation": 0.8486479150474893,
+  "successful_scans": 37,
+  "targets": [
+    "https://example.com",
+    "https://www.wikipedia.org",
+    "https://www.python.org",
+    "https://www.iana.org"
+  ]
+}

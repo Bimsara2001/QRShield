@@ -1,0 +1,10 @@
+case_id,expected_label,predicted_label,contributing_detector_signals,likely_explanation
+B02,benign,phishing,Hyphenated URL detected,Synthetic benign page activated frozen lexical or HTML heuristics; this evaluation does not alter them.
+B04,benign,phishing,Hyphenated URL detected,Synthetic benign page activated frozen lexical or HTML heuristics; this evaluation does not alter them.
+B05,benign,phishing,Hyphenated URL detected,Synthetic benign page activated frozen lexical or HTML heuristics; this evaluation does not alter them.
+B07,benign,phishing,Suspicious keyword detected: signin | Password input field detected,Synthetic benign page activated frozen lexical or HTML heuristics; this evaluation does not alter them.
+B08,benign,phishing,Password input field detected,Synthetic benign page activated frozen lexical or HTML heuristics; this evaluation does not alter them.
+P21,phishing,benign,None,Synthetic phishing-like scenario relies on an indicator outside the frozen detector's implemented signals.
+P22,phishing,benign,None,Synthetic phishing-like scenario relies on an indicator outside the frozen detector's implemented signals.
+P23,phishing,benign,None,Synthetic phishing-like scenario relies on an indicator outside the frozen detector's implemented signals.
+P24,phishing,benign,None,Synthetic phishing-like scenario relies on an indicator outside the frozen detector's implemented signals.

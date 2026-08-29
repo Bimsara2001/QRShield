@@ -1,0 +1,15 @@
+{
+  "best_balanced_accuracy_candidate": {
+    "balanced_accuracy": 0.8441458728248673,
+    "threshold": 1
+  },
+  "best_f1_candidate": {
+    "f1": 0.8221278619946696,
+    "threshold": 1
+  },
+  "development_only": true,
+  "production_thresholds_unchanged": {
+    "policy_40": 40,
+    "policy_70": 70
+  }
+}

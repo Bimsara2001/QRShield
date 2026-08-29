@@ -1,0 +1,14 @@
+{
+  "experiment": "H5B1 generic-form precision fix",
+  "production_file": "Backend/detectors/phishing_detector.py",
+  "old_sha256": "b9d5396e19be2f1e2337086f3ea0c724ba65d99325d016f9c9270f579230dfd6",
+  "new_sha256": "821e67605fe0db7cd8ec03929ae23caefa330e84183022c4d55d52babc5e8322",
+  "change": "Removed only the generic form-exists +10 score and reason.",
+  "preserved": ["password +20", "existing keyword list and +5 contributions", "iframe +10", "eval( +15"],
+  "lexical_detector_changed": false,
+  "thresholds_changed": false,
+  "benign_generic_form_false_positives": {"before": 4, "after": 0},
+  "password_detection_preserved": true,
+  "external_form_action_scored": false,
+  "holdout_used": false
+}

@@ -1,0 +1,56 @@
+{
+  "evaluation_label": "Independent Synthetic Offline Full-Pipeline Evaluation",
+  "scope": "Local static fixtures evaluated with frozen analyze_url and detect_phishing only; no network, browser, sandbox, MongoDB, or VirusTotal.",
+  "prediction_policy": "phishing when combined score >= 10; verdict uses production Low/Medium/High Risk boundaries 10 and 70.",
+  "case_counts": {
+    "total": 50,
+    "benign": 25,
+    "phishing": 25
+  },
+  "metrics": {
+    "tp": 21,
+    "tn": 20,
+    "fp": 5,
+    "fn": 4,
+    "total": 50,
+    "accuracy": 0.82,
+    "precision": 0.8076923076923077,
+    "recall": 0.84,
+    "f1": 0.8235294117647058,
+    "specificity": 0.8,
+    "false_positive_rate": 0.2,
+    "false_negative_rate": 0.16,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 20,
+        "ground_truth_phishing": 4
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 5,
+        "ground_truth_phishing": 21
+      }
+    }
+  },
+  "error_case_ids": [
+    "B02",
+    "B04",
+    "B05",
+    "B07",
+    "B08",
+    "P21",
+    "P22",
+    "P23",
+    "P24"
+  ],
+  "frozen_hashes_before_and_during_evaluation": {
+    "analyzer/risk_engine.py": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+    "detectors/phishing_detector.py": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a"
+  },
+  "independence": "New fixture paths and case IDs; not drawn from or counted with H5 controlled tuning fixtures. Synthetic authorship means this is not an independently sourced real-world corpus.",
+  "limitations": [
+    "Synthetic labels and authored cases do not estimate real-world phishing prevalence or generalization.",
+    "No browser rendering, navigation, redirect chain, screenshot, sandbox, DNS, MongoDB, or VirusTotal component is exercised.",
+    "Synthetic URL equals final URL, so redirect-risk scoring is not evaluated.",
+    "The benchmark is evaluation-only; detector behavior, weights, thresholds, and production scan behavior were not changed."
+  ]
+}

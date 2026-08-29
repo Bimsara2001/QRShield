@@ -1,0 +1,11 @@
+heuristic_number,heuristic,question,n,mean,median,minimum,maximum,sample_standard_deviation
+1,Visibility of system status,"The application clearly shows what the system is doing and its current status",5,5.00,5.00,5,5,0.000
+2,Match between system and the real world,"QRShield terminology, labels, risk messages, and information are easy to understand",5,4.60,5.00,4,5,0.548
+3,User control and freedom,"I feel in control and can easily navigate back or leave screens when needed",5,4.60,5.00,4,5,0.548
+4,Consistency and standards,"The interface, buttons, labels, and navigation are consistent",5,5.00,5.00,5,5,0.000
+5,Error prevention,"The application helps prevent mistakes during scanning and URL analysis",5,5.00,5.00,5,5,0.000
+6,Recognition rather than recall,"I can understand available actions without remembering previous instructions",5,5.00,5.00,5,5,0.000
+7,Flexibility and efficiency of use,"The main QRShield tasks can be completed efficiently",5,5.00,5.00,5,5,0.000
+8,Aesthetic and minimalist design,"The interface is visually clear and avoids unnecessary information",5,5.00,5.00,5,5,0.000
+9,"Help users recognize, diagnose, and recover from errors","Error messages help me understand what went wrong",5,5.00,5.00,5,5,0.000
+10,Help and documentation,"The application provides enough guidance to use its main features",5,5.00,5.00,5,5,0.000

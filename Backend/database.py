@@ -1,9 +1,10 @@
 from pymongo import MongoClient
+import os
 
-MONGO_URI = "mongodb+srv://pvbimsara0804_db_user:DNNP8oEPeuvcsiMh@qrshieldcluster.gztrjri.mongodb.net/?appName=QRShieldCluster"
+MONGO_URI = os.environ.get("MONGO_URI", "").strip()
 
-client = MongoClient(MONGO_URI)
+client = MongoClient(MONGO_URI) if MONGO_URI else None
 
-db = client["qrshield"]
+db = client["qrshield"] if client is not None else None
 
-scan_collection = db["scan_history"]
+scan_collection = db["scan_history"] if db is not None else None

@@ -1,0 +1,20 @@
+{
+  "access_date_utc": "2026-08-11",
+  "citation": "Prasad, A. & Chandra, S. (2024). PhiUSIIL Phishing URL (Website) [Dataset]. UCI Machine Learning Repository.",
+  "dataset_id": 967,
+  "dataset_name": "PhiUSIIL Phishing URL (Website)",
+  "doi": "10.1016/j.cose.2023.103545",
+  "download_url": "https://archive.ics.uci.edu/static/public/967/phiusiil%2Bphishing%2Burl%2Bdataset.zip",
+  "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)",
+  "local_filename": "PhiUSIIL_Phishing_URL_Dataset.csv",
+  "official_url": "https://archive.ics.uci.edu/dataset/967/phiusil-phishing-url-dataset",
+  "original_label_counts": {
+    "0": 100945,
+    "1": 134850
+  },
+  "original_legitimate_count": 134850,
+  "original_phishing_count": 100945,
+  "original_row_count": 235795,
+  "sha256": "a236549cd369cd80bd478ff8e1779cbf44c58d5c3f79f7a51a1adbed7d06d1c6",
+  "source": "UCI Machine Learning Repository"
+}

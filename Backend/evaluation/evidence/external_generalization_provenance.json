@@ -1,0 +1,47 @@
+{
+  "evaluation_label": "External URL Generalizability Validation",
+  "acquired_at_utc": "2026-08-25T19:48:18+00:00",
+  "sources": {
+    "phishing": {
+      "name": "PhishTank online-valid CSV",
+      "source_url": "https://data.phishtank.com/data/online-valid.csv",
+      "official_documentation": "https://www.phishtank.org/developer_info.php",
+      "label_mapping": "verified online-valid feed row -> phishing",
+      "raw_file": "phishtank_online_valid_raw.csv",
+      "sha256": "a109f9b63c0cdba02889b5b8eb8d5a481e3df9ab8e96bb3b42d498f8399aa406",
+      "raw_rows": 73469,
+      "invalid_or_malformed_removed": 7,
+      "exact_duplicates_removed": 3,
+      "phiusiil_exact_overlap_removed": 2116,
+      "phiusiil_normalized_overlap_removed": 13
+    },
+    "benign": {
+      "name": "Tranco list 38LNL",
+      "source_url": "https://tranco-list.eu/download/38LNL/1000000",
+      "list_information_url": "https://tranco-list.eu/list/38LNL",
+      "label_mapping": "top-ranked pay-level domain -> benign proxy; not a guarantee that every domain is benign",
+      "raw_file": "tranco_38LNL_raw.csv",
+      "sha256": "be2bbf330cc4c336b987578d5f7599cb05bfb4b59b142b18dfe6e5ff1e792ba4",
+      "raw_rows": 1000000,
+      "invalid_or_malformed_removed": 0,
+      "exact_duplicates_removed": 0,
+      "phiusiil_exact_overlap_removed": 2,
+      "phiusiil_normalized_overlap_removed": 16
+    }
+  },
+  "phiusiil_overlap_reference": {
+    "dataset": "evaluation\\data\\phiusiil\\PhiUSIIL_Phishing_URL_Dataset.csv",
+    "rows_checked": 235795,
+    "method": "exact URL-string comparison plus conservative URL normalization; every matched external item was excluded"
+  },
+  "cross_class_collision_removal": {
+    "phishing": 11,
+    "benign": 10,
+    "normalized_collision_keys": 10
+  },
+  "sampling": {
+    "target_per_class": 10000,
+    "method": "first valid, deduplicated, non-overlapping records in source-file order; no score-based selection or tuning"
+  },
+  "safety": "Only the two source feed files were downloaded. No listed URL was opened, fetched, navigated, submitted to VirusTotal, or sent to any service."
+}

@@ -1,0 +1,33 @@
+{
+  "requirement_id": "D2",
+  "requirement": "Graceful external-intelligence failure handling",
+  "audit_method": "Controlled no-network acceptance check of the existing implementation; no production code changed.",
+  "source_evidence": [
+    "threat_intel/virustotal.py",
+    "main.py"
+  ],
+  "controlled_check": {
+    "network_access": "None. requests.get was replaced before direct VirusTotal checks.",
+    "non_200_response": {
+      "observed": "Returned a structured error object with the message 'VirusTotal request failed'.",
+      "passed": true
+    },
+    "request_exception": {
+      "observed": "Returned a structured error object.",
+      "passed": true
+    },
+    "scan_route_with_structured_virustotal_error": {
+      "observed": "The controlled scan completed successfully, returned virustotal.status = error, and invoked persistence once.",
+      "passed": true
+    }
+  },
+  "decision": {
+    "status_before": "PARTIAL",
+    "status_after": "COMPLETE",
+    "basis": "The existing implementation returns a structured failure result for non-200 responses and request exceptions, and the scan route continues using that result instead of failing the entire scan."
+  },
+  "limitations": [
+    "The exception branch returns str(exception); this audit does not treat that as an assurance that upstream error details are sanitized.",
+    "No availability, retry, timeout, or third-party service-level guarantee is claimed."
+  ]
+}

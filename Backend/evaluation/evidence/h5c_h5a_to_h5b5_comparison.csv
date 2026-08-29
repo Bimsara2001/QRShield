@@ -1,0 +1,9 @@
+signal_or_case,h5a,h5b1,h5b2,h5b3,h5b4,h5b5
+generic benign form,10,0,0,0,0,0
+external credential form,30,20,30,30,30,30
+iframe text false positive,10,10,10,0,0,0
+actual iframe,10,10,10,10,10,10
+eval visible-text false positive,15,15,15,15,0,0
+executable eval,15,15,15,15,15,15
+password plus verify phrase,not present,not present,not present,not present,25,35
+external credential plus phrase,not present,not present,not present,not present,30,40

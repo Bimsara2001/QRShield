@@ -1,0 +1,16 @@
+sample_id,domain,source_label,ground_truth,risk_score,verdict,predicted_policy_40,predicted_policy_70,correct_policy_40,correct_policy_70,reasons,scan_status,failure_category,latency_seconds
+h2-url-0001,google.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,0.015559
+h2-url-0002,github.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,3.7e-05
+h2-url-0003,microsoft.com,legitimate,benign,40,Medium Risk,phishing,benign,False,True,URL shortener detected,success,,1.4e-05
+h2-url-0004,apple.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,1e-05
+h2-url-0005,wikipedia.org,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,9e-06
+h2-url-0006,paypal.com,legitimate,benign,20,Low Risk,benign,benign,True,True,Suspicious keyword detected: paypal,success,,9e-06
+h2-url-0007,amazon.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,9e-06
+h2-url-0008,facebook.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,7e-06
+h2-url-0009,linkedin.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,9e-06
+h2-url-0010,stackoverflow.com,legitimate,benign,0,Low Risk,benign,benign,True,True,,success,,7e-06
+h2-url-0011,example.com,legitimate,benign,15,Low Risk,benign,benign,True,True,URL does not use HTTPS,success,,8e-06
+h2-url-0012,bit.ly,suspicious,phishing,40,Medium Risk,phishing,benign,True,False,URL shortener detected,success,,9e-06
+h2-url-0013,192.168.1.1,suspicious,phishing,55,Medium Risk,phishing,benign,True,False,URL does not use HTTPS | Suspicious keyword detected: login | IP address used instead of domain,success,,1.3e-05
+h2-url-0014,free-gift-login.example.com,suspicious,phishing,80,High Risk,phishing,phishing,True,True,URL does not use HTTPS | Suspicious keyword detected: login | Suspicious keyword detected: free | Suspicious keyword detected: gift | Hyphenated URL detected | Multiple hyphens detected,success,,1.1e-05
+h2-url-0015,paypal-security-check.example.com,suspicious,phishing,85,High Risk,phishing,phishing,True,True,URL does not use HTTPS | Suspicious keyword detected: paypal | Suspicious keyword detected: security | Suspicious keyword detected: check | Hyphenated URL detected | Multiple hyphens detected,success,,1e-05

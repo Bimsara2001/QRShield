@@ -1,0 +1,968 @@
+{
+  "policy_40": {
+    "false_negative_count": 89489,
+    "most_common_reasons": [
+      {
+        "count": 43968,
+        "reason": "URL does not use HTTPS"
+      },
+      {
+        "count": 28313,
+        "reason": "Hyphenated URL detected"
+      },
+      {
+        "count": 10050,
+        "reason": "Multiple hyphens detected"
+      },
+      {
+        "count": 8045,
+        "reason": "Very long URL"
+      },
+      {
+        "count": 2050,
+        "reason": "Too many dots in URL"
+      },
+      {
+        "count": 1921,
+        "reason": "Suspiciously long domain name"
+      },
+      {
+        "count": 1338,
+        "reason": "Suspicious keyword detected: login"
+      },
+      {
+        "count": 710,
+        "reason": "Suspicious keyword detected: update"
+      },
+      {
+        "count": 393,
+        "reason": "Suspicious keyword detected: free"
+      },
+      {
+        "count": 356,
+        "reason": "Suspicious keyword detected: bank"
+      },
+      {
+        "count": 351,
+        "reason": "Suspicious keyword detected: account"
+      },
+      {
+        "count": 253,
+        "reason": "Suspicious keyword detected: secure"
+      },
+      {
+        "count": 201,
+        "reason": "Suspicious keyword detected: wallet"
+      },
+      {
+        "count": 197,
+        "reason": "Suspicious keyword detected: check"
+      },
+      {
+        "count": 142,
+        "reason": "Suspicious keyword detected: verify"
+      },
+      {
+        "count": 129,
+        "reason": "Suspicious keyword detected: crypto"
+      },
+      {
+        "count": 118,
+        "reason": "Suspicious keyword detected: confirm"
+      },
+      {
+        "count": 100,
+        "reason": "Suspicious keyword detected: signin"
+      },
+      {
+        "count": 93,
+        "reason": "Suspicious keyword detected: security"
+      },
+      {
+        "count": 42,
+        "reason": "Suspicious keyword detected: gift"
+      },
+      {
+        "count": 42,
+        "reason": "Suspicious keyword detected: bonus"
+      },
+      {
+        "count": 14,
+        "reason": "Suspicious keyword detected: password"
+      },
+      {
+        "count": 7,
+        "reason": "Suspicious keyword detected: paypal"
+      },
+      {
+        "count": 6,
+        "reason": "IP address used instead of domain"
+      }
+    ],
+    "samples": [
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.teramill.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000012",
+        "scan_status": "success",
+        "url_sha256": "976b274749b18710579cd703a5eb0a6ee03ec5324c46e6db2927f2b14bdad0da",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.f0519141.xsph.ru",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000021",
+        "scan_status": "success",
+        "url_sha256": "94c6e06b6c8d78de1096ec143bea7498d76f8d256db451657e35c15310c598d8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.shprakserf.gq",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000022",
+        "scan_status": "success",
+        "url_sha256": "002e9713f9356b3470f1360043e4e03e378274c1744059f051d86012ee64e237",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "service-mitld.firebaseapp.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000028",
+        "scan_status": "success",
+        "url_sha256": "97deb52a7e6049a4f57c969822dcb434c1f1679cc8b3207c70816421a74c4b7b",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.kuradox92.lima-city.de",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS",
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 25,
+        "sample_id": "phiusiil-000029",
+        "scan_status": "success",
+        "url_sha256": "0bddfaf0e1fb21e616fdfa065e0b8ffdcd2713349505e543b1fe69ec41ac09e8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "liuy-9a930.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000030",
+        "scan_status": "success",
+        "url_sha256": "f359761c36fd3c10250c6165015ac376424a85668fc116e5ff07655a86aa22f9",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "ipfs.io",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Very long URL"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000032",
+        "scan_status": "success",
+        "url_sha256": "0df7e0d957c1c48f0737563f62aa040de7a4ba428cd0bf1e4402bf1747ee89ab",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "hidok4f8zl.firebaseapp.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000035",
+        "scan_status": "success",
+        "url_sha256": "55f65d8704671bbeaa5706b5e8ccd2c0d9e572fdb5de4f2dd67ccd505e32fd1e",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.ooguy.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000038",
+        "scan_status": "success",
+        "url_sha256": "fa514c9735791f25944f4262df5c1e7bff334cd00ec725cd92d9a16bbb38dc08",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.fairytalesinc.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000040",
+        "scan_status": "success",
+        "url_sha256": "786af1ae09c282e5329a55cef11f8bc8c9a5bcf17fbdb47c8f9330b21e209ee6",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.iuhjn.pplink.club",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000041",
+        "scan_status": "success",
+        "url_sha256": "e502efcb9990e3d07dd720ddbaa229c3f94f77cb10e8cccfe6fb6b3ef9fcf23e",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "mechinchem-5cb8a.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000042",
+        "scan_status": "success",
+        "url_sha256": "6b76cb9b01b2d3806a780f6819f9099af2c17563d11b35ba8aba4029b1796212",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "fb-restriction-case-97be5.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected",
+          "Multiple hyphens detected"
+        ],
+        "risk_score": 25,
+        "sample_id": "phiusiil-000045",
+        "scan_status": "success",
+        "url_sha256": "b6da53bcc9aaca6bc4d0ad3c4e70fd2dcb67b39164f1257b8626ea6a342bdde8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "pontosapontamentolu.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Very long URL",
+          "Hyphenated URL detected",
+          "Multiple hyphens detected"
+        ],
+        "risk_score": 35,
+        "sample_id": "phiusiil-000046",
+        "scan_status": "success",
+        "url_sha256": "dfed9d586210ab8292dcad5df420a5c722233e8c9cd63694995e8eaebc0eb15c",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.komaru.today",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000050",
+        "scan_status": "success",
+        "url_sha256": "40b1613e2b68acd4fff047ff59edcf40b8d041919d06f5fd24b4558e1e296355",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "dev-634536.pantheonsite.io",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000051",
+        "scan_status": "success",
+        "url_sha256": "e4b38cf8db9008c41a660792c50631ebfaa7c6739c1b00cff51b75997731bef1",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "sabadonoappmagazine.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000053",
+        "scan_status": "success",
+        "url_sha256": "93db3be375aa779680484bfec01aa0c3685b7a0eb7a6ca3fc9963acc327f34b2",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.nextraload.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000055",
+        "scan_status": "success",
+        "url_sha256": "cdd2d7ec835dbaa557d1afb72b2e1c35deebabb9acec3fd7bd9188fb3028b0a7",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "topaka.cloud",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000058",
+        "scan_status": "success",
+        "url_sha256": "3034c481dcdb0fa83fae1a9ec529f0678e6d4e57a16e6e8a2e7070ca1505c1de",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "metafb-tvz6efk.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000060",
+        "scan_status": "success",
+        "url_sha256": "36beec462ca2ac99119694457b01a8561d2a83e9a0a194db46a200561595f2ee",
+        "verdict": "Low Risk"
+      }
+    ],
+    "score_buckets": {
+      "0": 16997,
+      "1_19": 49253,
+      "20_39": 23239,
+      "40_69": 0,
+      "70_plus": 0
+    },
+    "score_distribution": {
+      "count": 89489,
+      "maximum": 35,
+      "mean": 14.213981606677915,
+      "median": 15,
+      "minimum": 0,
+      "p25": 10,
+      "p75": 20,
+      "p90": 25,
+      "p95": 25,
+      "standard_deviation": 9.00355872226976
+    }
+  },
+  "policy_70": {
+    "false_negative_count": 99748,
+    "most_common_reasons": [
+      {
+        "count": 50800,
+        "reason": "URL does not use HTTPS"
+      },
+      {
+        "count": 35576,
+        "reason": "Hyphenated URL detected"
+      },
+      {
+        "count": 16296,
+        "reason": "Multiple hyphens detected"
+      },
+      {
+        "count": 10273,
+        "reason": "Very long URL"
+      },
+      {
+        "count": 3334,
+        "reason": "Too many dots in URL"
+      },
+      {
+        "count": 2991,
+        "reason": "URL shortener detected"
+      },
+      {
+        "count": 2788,
+        "reason": "Suspicious keyword detected: login"
+      },
+      {
+        "count": 2466,
+        "reason": "Suspiciously long domain name"
+      },
+      {
+        "count": 818,
+        "reason": "Suspicious keyword detected: update"
+      },
+      {
+        "count": 704,
+        "reason": "Suspicious keyword detected: bank"
+      },
+      {
+        "count": 582,
+        "reason": "Suspicious keyword detected: signin"
+      },
+      {
+        "count": 552,
+        "reason": "Suspicious keyword detected: account"
+      },
+      {
+        "count": 518,
+        "reason": "Suspicious keyword detected: secure"
+      },
+      {
+        "count": 425,
+        "reason": "Suspicious keyword detected: free"
+      },
+      {
+        "count": 387,
+        "reason": "Suspicious keyword detected: confirm"
+      },
+      {
+        "count": 288,
+        "reason": "Suspicious keyword detected: verify"
+      },
+      {
+        "count": 287,
+        "reason": "Suspicious keyword detected: wallet"
+      },
+      {
+        "count": 269,
+        "reason": "Suspicious keyword detected: check"
+      },
+      {
+        "count": 198,
+        "reason": "IP address used instead of domain"
+      },
+      {
+        "count": 175,
+        "reason": "Suspicious keyword detected: security"
+      },
+      {
+        "count": 156,
+        "reason": "Suspicious keyword detected: crypto"
+      },
+      {
+        "count": 56,
+        "reason": "Suspicious keyword detected: gift"
+      },
+      {
+        "count": 45,
+        "reason": "Suspicious keyword detected: bonus"
+      },
+      {
+        "count": 33,
+        "reason": "Suspicious keyword detected: password"
+      },
+      {
+        "count": 25,
+        "reason": "Suspicious keyword detected: paypal"
+      }
+    ],
+    "samples": [
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.teramill.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000012",
+        "scan_status": "success",
+        "url_sha256": "976b274749b18710579cd703a5eb0a6ee03ec5324c46e6db2927f2b14bdad0da",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.f0519141.xsph.ru",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000021",
+        "scan_status": "success",
+        "url_sha256": "94c6e06b6c8d78de1096ec143bea7498d76f8d256db451657e35c15310c598d8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.shprakserf.gq",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000022",
+        "scan_status": "success",
+        "url_sha256": "002e9713f9356b3470f1360043e4e03e378274c1744059f051d86012ee64e237",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "service-mitld.firebaseapp.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000028",
+        "scan_status": "success",
+        "url_sha256": "97deb52a7e6049a4f57c969822dcb434c1f1679cc8b3207c70816421a74c4b7b",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.kuradox92.lima-city.de",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS",
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 25,
+        "sample_id": "phiusiil-000029",
+        "scan_status": "success",
+        "url_sha256": "0bddfaf0e1fb21e616fdfa065e0b8ffdcd2713349505e543b1fe69ec41ac09e8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "liuy-9a930.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000030",
+        "scan_status": "success",
+        "url_sha256": "f359761c36fd3c10250c6165015ac376424a85668fc116e5ff07655a86aa22f9",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "ipfs.io",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Very long URL"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000032",
+        "scan_status": "success",
+        "url_sha256": "0df7e0d957c1c48f0737563f62aa040de7a4ba428cd0bf1e4402bf1747ee89ab",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": true,
+        "correct_policy_70": false,
+        "domain": "att-103731-107123.weeblysite.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "phishing",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS",
+          "Hyphenated URL detected",
+          "Multiple hyphens detected"
+        ],
+        "risk_score": 40,
+        "sample_id": "phiusiil-000033",
+        "scan_status": "success",
+        "url_sha256": "5ed6f6ac4aaf1e0c9bb16f784920e69a422f1743679595e85530303789faadfd",
+        "verdict": "Medium Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "hidok4f8zl.firebaseapp.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000035",
+        "scan_status": "success",
+        "url_sha256": "55f65d8704671bbeaa5706b5e8ccd2c0d9e572fdb5de4f2dd67ccd505e32fd1e",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.ooguy.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000038",
+        "scan_status": "success",
+        "url_sha256": "fa514c9735791f25944f4262df5c1e7bff334cd00ec725cd92d9a16bbb38dc08",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.fairytalesinc.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000040",
+        "scan_status": "success",
+        "url_sha256": "786af1ae09c282e5329a55cef11f8bc8c9a5bcf17fbdb47c8f9330b21e209ee6",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.iuhjn.pplink.club",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000041",
+        "scan_status": "success",
+        "url_sha256": "e502efcb9990e3d07dd720ddbaa229c3f94f77cb10e8cccfe6fb6b3ef9fcf23e",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "mechinchem-5cb8a.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000042",
+        "scan_status": "success",
+        "url_sha256": "6b76cb9b01b2d3806a780f6819f9099af2c17563d11b35ba8aba4029b1796212",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "fb-restriction-case-97be5.web.app",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected",
+          "Multiple hyphens detected"
+        ],
+        "risk_score": 25,
+        "sample_id": "phiusiil-000045",
+        "scan_status": "success",
+        "url_sha256": "b6da53bcc9aaca6bc4d0ad3c4e70fd2dcb67b39164f1257b8626ea6a342bdde8",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "pontosapontamentolu.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Very long URL",
+          "Hyphenated URL detected",
+          "Multiple hyphens detected"
+        ],
+        "risk_score": 35,
+        "sample_id": "phiusiil-000046",
+        "scan_status": "success",
+        "url_sha256": "dfed9d586210ab8292dcad5df420a5c722233e8c9cd63694995e8eaebc0eb15c",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.komaru.today",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000050",
+        "scan_status": "success",
+        "url_sha256": "40b1613e2b68acd4fff047ff59edcf40b8d041919d06f5fd24b4558e1e296355",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "dev-634536.pantheonsite.io",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "Hyphenated URL detected"
+        ],
+        "risk_score": 10,
+        "sample_id": "phiusiil-000051",
+        "scan_status": "success",
+        "url_sha256": "e4b38cf8db9008c41a660792c50631ebfaa7c6739c1b00cff51b75997731bef1",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "sabadonoappmagazine.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000053",
+        "scan_status": "success",
+        "url_sha256": "93db3be375aa779680484bfec01aa0c3685b7a0eb7a6ca3fc9963acc327f34b2",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "www.nextraload.com",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [
+          "URL does not use HTTPS"
+        ],
+        "risk_score": 15,
+        "sample_id": "phiusiil-000055",
+        "scan_status": "success",
+        "url_sha256": "cdd2d7ec835dbaa557d1afb72b2e1c35deebabb9acec3fd7bd9188fb3028b0a7",
+        "verdict": "Low Risk"
+      },
+      {
+        "correct_policy_40": false,
+        "correct_policy_70": false,
+        "domain": "topaka.cloud",
+        "failure_category": null,
+        "ground_truth": "phishing",
+        "original_dataset_label": 0,
+        "predicted_policy_40": "benign",
+        "predicted_policy_70": "benign",
+        "reasons": [],
+        "risk_score": 0,
+        "sample_id": "phiusiil-000058",
+        "scan_status": "success",
+        "url_sha256": "3034c481dcdb0fa83fae1a9ec529f0678e6d4e57a16e6e8a2e7070ca1505c1de",
+        "verdict": "Low Risk"
+      }
+    ],
+    "score_buckets": {
+      "0": 16997,
+      "1_19": 49253,
+      "20_39": 23239,
+      "40_69": 10259,
+      "70_plus": 0
+    },
+    "score_distribution": {
+      "count": 99748,
+      "maximum": 65,
+      "mean": 17.625466174760398,
+      "median": 15.0,
+      "minimum": 0,
+      "p25": 10,
+      "p75": 25,
+      "p90": 40,
+      "p95": 45,
+      "standard_deviation": 13.453753629736749
+    }
+  }
+}

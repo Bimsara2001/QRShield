@@ -1,0 +1,17 @@
+{
+  "benign": {
+    "count": 94395,
+    "low_risk": 83977,
+    "low_risk_percent": 88.96339848508926,
+    "medium_or_higher": 10418,
+    "medium_or_higher_percent": 11.036601514910748
+  },
+  "phishing": {
+    "count": 70661,
+    "low_risk": 12123,
+    "low_risk_percent": 17.156564441488232,
+    "medium_or_higher": 58538,
+    "medium_or_higher_percent": 82.84343555851177
+  },
+  "threshold": 10
+}

@@ -1,0 +1,21 @@
+{
+  "experiment": "H5B5 form-local credential language signal",
+  "server": "current Backend venv on temporary port 8006",
+  "example_com": {
+    "status": "success",
+    "risk_score": 0,
+    "verdict": "Low Risk",
+    "reasons": [],
+    "title": "Example Domain",
+    "virustotal_status": "success"
+  },
+  "google": {
+    "status": "success",
+    "risk_score": 10,
+    "verdict": "Medium Risk",
+    "reasons": ["URL redirected to another address"],
+    "title": "Google",
+    "virustotal_status": "success"
+  },
+  "note": "Google's normal search form did not trigger the credential-context signal; the existing redirect behavior is unchanged."
+}

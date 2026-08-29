@@ -1,0 +1,38 @@
+[
+  {
+    "rank": 1,
+    "category": "A. confirmed bug fix",
+    "problem": "Generic form presence penalizes ordinary search/contact/newsletter forms.",
+    "evidence": "benign fixtures all receive +10.",
+    "smallest_change": "Make a form-only signal informational or lower-weight; preserve password signal.",
+    "benefit": "Reduce benign form false positives.",
+    "risk": "May reduce detection of credential pages lacking password inputs."
+  },
+  {
+    "rank": 2,
+    "category": "C. new HTML signal",
+    "problem": "External form actions are ignored.",
+    "evidence": "external_credential has the same score as same-origin login_form.",
+    "smallest_change": "Compare absolute form action origin with the analyzed page origin.",
+    "benefit": "Contextualize credential exfiltration.",
+    "risk": "CDNs and federated login flows can be legitimate."
+  },
+  {
+    "rank": 3,
+    "category": "C. new HTML signal",
+    "problem": "Credential language is not independently scored.",
+    "evidence": "suspicious_password does not match the configured 'verify your account' or 'confirm identity' phrases.",
+    "smallest_change": "Use narrowly scoped contextual phrases near credential fields.",
+    "benefit": "Improve phishing-like page separation.",
+    "risk": "Brand/support pages may use similar language."
+  },
+  {
+    "rank": 4,
+    "category": "D. scoring calibration",
+    "problem": "HTML points can materially affect the final threshold.",
+    "evidence": "Current password+form combination is +30 before lexical signals.",
+    "smallest_change": "Calibrate only after a labelled HTML corpus exists.",
+    "benefit": "Better score interpretation.",
+    "risk": "Overfitting controlled fixtures."
+  }
+]

@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'api_service.dart';
 
 class HealthService {
-  static const String baseUrl =
-      "http://localhost:8000";
+  static const String baseUrl = ApiService.baseUrl;
 
   static Future<bool> checkBackend() async {
     try {

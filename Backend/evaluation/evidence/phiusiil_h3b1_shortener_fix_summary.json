@@ -1,0 +1,239 @@
+{
+  "after_metrics": {
+    "policy_40": {
+      "accuracy": 0.6092538290034897,
+      "balanced_accuracy": 0.5436415320817257,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 94389,
+          "ground_truth_phishing": 64489
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 6,
+          "ground_truth_phishing": 6172
+        }
+      },
+      "f1": 0.16064758781348012,
+      "false_negative_rate": 0.9126533731478468,
+      "false_positive_rate": 6.356268870173209e-05,
+      "fn": 64489,
+      "fp": 6,
+      "precision": 0.9990288119132406,
+      "recall": 0.08734662685215323,
+      "specificity": 0.9999364373112982,
+      "tn": 94389,
+      "total": 165056,
+      "tp": 6172
+    },
+    "policy_70": {
+      "accuracy": 0.5749260856921288,
+      "balanced_accuracy": 0.5035380195581721,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 94395,
+          "ground_truth_phishing": 70161
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 0,
+          "ground_truth_phishing": 500
+        }
+      },
+      "f1": 0.014052641193912396,
+      "false_negative_rate": 0.9929239608836558,
+      "false_positive_rate": 0.0,
+      "fn": 70161,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.007076039116344236,
+      "specificity": 1.0,
+      "tn": 94395,
+      "total": 165056,
+      "tp": 500
+    }
+  },
+  "before_metrics": {
+    "policy_40": {
+      "accuracy": 0.5993905098875533,
+      "balanced_accuracy": 0.5383167350984753,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 90907,
+          "ground_truth_phishing": 62635
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 3488,
+          "ground_truth_phishing": 8026
+        }
+      },
+      "f1": 0.19533921508974747,
+      "false_negative_rate": 0.8864154201044423,
+      "false_positive_rate": 0.03695110969860692,
+      "fn": 62635,
+      "fp": 3488,
+      "precision": 0.6970644432864339,
+      "recall": 0.11358457989555766,
+      "specificity": 0.9630488903013931,
+      "tn": 90907,
+      "total": 165056,
+      "tp": 8026
+    },
+    "policy_70": {
+      "accuracy": 0.5769132900348972,
+      "balanced_accuracy": 0.5058714144270714,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 94388,
+          "ground_truth_phishing": 69826
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 7,
+          "ground_truth_phishing": 835
+        }
+      },
+      "f1": 0.023355663398738513,
+      "false_negative_rate": 0.9881830146757051,
+      "false_positive_rate": 7.415647015202076e-05,
+      "fn": 69826,
+      "fp": 7,
+      "precision": 0.9916864608076009,
+      "recall": 0.011816985324294873,
+      "specificity": 0.9999258435298479,
+      "tn": 94388,
+      "total": 165056,
+      "tp": 835
+    }
+  },
+  "best_development_balanced_accuracy_candidate": {
+    "balanced_accuracy": 0.8590341702180051,
+    "threshold": 1
+  },
+  "best_development_f1_candidate": {
+    "f1": 0.8385511792976501,
+    "threshold": 1
+  },
+  "development_only": true,
+  "existing_shortener_domains": [
+    "bit.ly",
+    "tinyurl.com",
+    "goo.gl",
+    "t.co",
+    "ow.ly",
+    "is.gd"
+  ],
+  "experiment": "H3B1 shortener-hostname fix",
+  "holdout_touched": false,
+  "matching_change": "hostname equals configured shortener or ends with '.' + configured shortener; one trailing dot normalized; no DNS",
+  "new_risk_engine_sha256": "121b64d4826f01f604b75a1ac15e1aef1a6b492e2b5e80f29c3ffdeba2dbefa6",
+  "offline_runtime_seconds": 5.0488729000790045,
+  "offline_urls_per_second": 32691.65282362668,
+  "old_risk_engine_sha256": "2b6e26c1dd081e38931aeb24186114ab4c00e1a873f14b5406a96d54e7d9e167",
+  "production_thresholds_unchanged": {
+    "policy_40": 40,
+    "policy_70": 70
+  },
+  "rows_evaluated": 165056,
+  "score_bands_after": {
+    "benign": {
+      "0": 83977,
+      "10_19": 9344,
+      "1_9": 0,
+      "20_29": 804,
+      "30_39": 264,
+      "40_69": 6,
+      "70_plus": 0
+    },
+    "phishing": {
+      "0": 12123,
+      "10_19": 35711,
+      "1_9": 0,
+      "20_29": 13873,
+      "30_39": 2782,
+      "40_69": 5672,
+      "70_plus": 500
+    }
+  },
+  "score_bands_before": {
+    "benign": {
+      "0": 80867,
+      "10_19": 9000,
+      "1_9": 0,
+      "20_29": 783,
+      "30_39": 257,
+      "40_69": 3481,
+      "70_plus": 7
+    },
+    "phishing": {
+      "0": 11899,
+      "10_19": 34474,
+      "1_9": 0,
+      "20_29": 13569,
+      "30_39": 2693,
+      "40_69": 7191,
+      "70_plus": 835
+    }
+  },
+  "score_distributions_after": {
+    "benign": {
+      "count": 94395,
+      "maximum": 50,
+      "mean": 1.3074315376873775,
+      "median": 0,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 0,
+      "p90": 10,
+      "p95": 10,
+      "standard_deviation": 4.101944160348268
+    },
+    "phishing": {
+      "count": 70661,
+      "maximum": 130,
+      "mean": 17.341673624771797,
+      "median": 15,
+      "minimum": 0,
+      "p25": 10,
+      "p75": 25,
+      "p90": 35,
+      "p95": 40,
+      "standard_deviation": 14.113917254108891
+    }
+  },
+  "score_distributions_before": {
+    "benign": {
+      "count": 94395,
+      "maximum": 75,
+      "mean": 2.782933418083585,
+      "median": 0,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 0,
+      "p90": 10,
+      "p95": 15,
+      "standard_deviation": 8.571362396934475
+    },
+    "phishing": {
+      "count": 70661,
+      "maximum": 170,
+      "mean": 18.554223687748546,
+      "median": 15,
+      "minimum": 0,
+      "p25": 10,
+      "p75": 25,
+      "p90": 40,
+      "p95": 50,
+      "standard_deviation": 15.976250547127297
+    }
+  },
+  "shortener_triggers": {
+    "benign_after": 0,
+    "benign_before": 3482,
+    "benign_false_positive_before": 3482,
+    "benign_false_positive_removed": 3482,
+    "legitimate_configured_shortener_after": 0,
+    "legitimate_configured_shortener_domains": {},
+    "phishing_after": 354,
+    "phishing_before": 2496,
+    "phishing_detections_lost_policy_40": 1854,
+    "phishing_detections_lost_policy_70": 89
+  }
+}

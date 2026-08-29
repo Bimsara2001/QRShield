@@ -1,0 +1,9 @@
+{
+  "captured_at": "2026-08-11T20:14:41.515726+00:00",
+  "default_network_fallback_observed": false,
+  "proxy_restored_running": true,
+  "safe_error_message": "Secure sandbox infrastructure is unavailable.",
+  "scan_failed": true,
+  "scan_workers_after": [],
+  "scan_workers_before": []
+}

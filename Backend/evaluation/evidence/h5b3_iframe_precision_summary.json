@@ -1,0 +1,12 @@
+{
+  "experiment": "H5B3 structural iframe precision fix",
+  "old_phishing_detector_sha256": "adc6350ca0606dba30572da898b8cdec9a0309a9822b14f9130d8cc6b41ad05c",
+  "new_phishing_detector_sha256": "071840eecd7fd39b0fea9a12dd87c5ec2f435268c46ac84d0a48a0a4cb024be6",
+  "risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "change": "Replaced raw iframe substring detection with BeautifulSoup structural element detection.",
+  "iframe_score": 10,
+  "preserved": ["generic form score 0", "password +20", "external credential action +10", "keywords", "eval( +15"],
+  "thresholds": {"screening": 10, "high_risk": 70},
+  "holdout_used": false,
+  "network_access": false
+}

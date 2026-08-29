@@ -1,0 +1,140 @@
+{
+  "algorithm_state": {
+    "git_commit": "e2f88815c51d0b83f78414bf30597595d5669233",
+    "method": "analyze_url(url, url); original and final URL are identical because no redirect data is used",
+    "risk_engine_sha256": "2b6e26c1dd081e38931aeb24186114ab4c00e1a873f14b5406a96d54e7d9e167",
+    "score_thresholds": {
+      "high": ">=70",
+      "low": "<40",
+      "medium": "40-69"
+    }
+  },
+  "analysis_coverage": 1.0,
+  "class_counts": {
+    "benign": 134850,
+    "phishing": 100945
+  },
+  "dataset_provenance_file": "phiusiil_dataset_provenance.json",
+  "dataset_validation": {
+    "columns_verified": [
+      "URL",
+      "label"
+    ],
+    "duplicate_url_count": 425,
+    "evaluated_row_count": 235795,
+    "excluded_row_count": 0,
+    "malformed_url_syntax_count": 0,
+    "missing_label_count": 0,
+    "missing_url_count": 0,
+    "raw_row_count": 235795,
+    "unexpected_labels": {}
+  },
+  "evaluation_type": "URL-only lexical risk-engine baseline",
+  "false_negative_analysis_file": "phiusiil_false_negative_analysis.json",
+  "false_positive_analysis_file": "phiusiil_false_positive_analysis.json",
+  "full_scan_evaluation": "not_run by design; PhiUSIIL phishing URLs were not visited",
+  "network_access_used": false,
+  "offline_lexical_runtime_seconds": 5.18836440006271,
+  "offline_urls_processed_per_second": 45446.88495610486,
+  "original_label_counts": {
+    "0": 100945,
+    "1": 134850
+  },
+  "policies": {
+    "policy_40": {
+      "accuracy": 0.5994062639156895,
+      "balanced_accuracy": 0.5383195963513724,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 129881,
+          "ground_truth_phishing": 89489
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 4969,
+          "ground_truth_phishing": 11456
+        }
+      },
+      "f1": 0.19521172360909944,
+      "false_negative_rate": 0.8865124572787161,
+      "false_positive_rate": 0.03684835001853912,
+      "fn": 89489,
+      "fp": 4969,
+      "precision": 0.6974733637747337,
+      "recall": 0.11348754272128386,
+      "specificity": 0.9631516499814609,
+      "tn": 129881,
+      "total": 235795,
+      "tp": 11456
+    },
+    "policy_70": {
+      "accuracy": 0.5769206302084438,
+      "balanced_accuracy": 0.5058844773398613,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 134838,
+          "ground_truth_phishing": 99748
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 12,
+          "ground_truth_phishing": 1197
+        }
+      },
+      "f1": 0.02343520566987098,
+      "false_negative_rate": 0.9881420575560949,
+      "false_positive_rate": 8.898776418242492e-05,
+      "fn": 99748,
+      "fp": 12,
+      "precision": 0.9900744416873449,
+      "recall": 0.011857942443905096,
+      "specificity": 0.9999110122358176,
+      "tn": 134838,
+      "total": 235795,
+      "tp": 1197
+    }
+  },
+  "redirect_data_available": false,
+  "redirect_feature_evaluated": false,
+  "score_distributions": {
+    "benign": {
+      "count": 134850,
+      "maximum": 75,
+      "mean": 2.775046347793845,
+      "median": 0.0,
+      "minimum": 0,
+      "p25": 0,
+      "p75": 0,
+      "p90": 10,
+      "p95": 15,
+      "standard_deviation": 8.55889075419915
+    },
+    "phishing": {
+      "count": 100945,
+      "maximum": 170,
+      "mean": 18.55034920005944,
+      "median": 15,
+      "minimum": 0,
+      "p25": 10,
+      "p75": 25,
+      "p90": 40,
+      "p95": 50,
+      "standard_deviation": 15.99406316630974
+    }
+  },
+  "threshold_sweep_file": "phiusiil_threshold_sweep.csv",
+  "thresholds": {
+    "policy_40_positive": "score >= 40",
+    "policy_70_positive": "score >= 70"
+  },
+  "verdict_ranges": {
+    "benign": {
+      "high_risk_70_plus": 12,
+      "low_risk_0_39": 129881,
+      "medium_risk_40_69": 4957
+    },
+    "phishing": {
+      "high_risk_70_plus": 1197,
+      "low_risk_0_39": 89489,
+      "medium_risk_40_69": 10259
+    }
+  }
+}

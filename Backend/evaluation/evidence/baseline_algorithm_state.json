@@ -1,0 +1,10 @@
+{
+  "git_commit": "e2f88815c51d0b83f78414bf30597595d5669233",
+  "redirect_input": "final_url equals original URL because no redirect labels/data exist",
+  "risk_engine_sha256": "2b6e26c1dd081e38931aeb24186114ab4c00e1a873f14b5406a96d54e7d9e167",
+  "score_thresholds": {
+    "high": ">=70",
+    "low": "<40",
+    "medium": "40-69"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "current_threshold_40": {
+    "accuracy": 0.6092538290034897,
+    "balanced_accuracy": 0.5436415320817257,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 94389,
+        "ground_truth_phishing": 64489
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 6,
+        "ground_truth_phishing": 6172
+      }
+    },
+    "f1": 0.16064758781348012,
+    "false_negative_rate": 0.9126533731478468,
+    "false_positive_rate": 6.356268870173209e-05,
+    "fn": 64489,
+    "fp": 6,
+    "precision": 0.9990288119132406,
+    "recall": 0.08734662685215323,
+    "specificity": 0.9999364373112982,
+    "threshold": 40,
+    "tn": 94389,
+    "total": 165056,
+    "tp": 6172
+  },
+  "development_only": true,
+  "selected_threshold": {
+    "accuracy": 0.8634342283830942,
+    "balanced_accuracy": 0.8590341702180051,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 83977,
+        "ground_truth_phishing": 12123
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 10418,
+        "ground_truth_phishing": 58538
+      }
+    },
+    "f1": 0.8385511792976501,
+    "false_negative_rate": 0.1715656444148823,
+    "false_positive_rate": 0.11036601514910747,
+    "fn": 12123,
+    "fp": 10418,
+    "precision": 0.8489181507047973,
+    "recall": 0.8284343555851177,
+    "specificity": 0.8896339848508925,
+    "threshold": 10,
+    "tn": 83977,
+    "total": 165056,
+    "tp": 58538
+  }
+}

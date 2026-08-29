@@ -1,0 +1,96 @@
+{
+  "algorithm_state": {
+    "git_commit": "e2f88815c51d0b83f78414bf30597595d5669233",
+    "redirect_input": "final_url equals original URL because no redirect labels/data exist",
+    "risk_engine_sha256": "2b6e26c1dd081e38931aeb24186114ab4c00e1a873f14b5406a96d54e7d9e167",
+    "score_thresholds": {
+      "high": ">=70",
+      "low": "<40",
+      "medium": "40-69"
+    }
+  },
+  "analysis_coverage": 1.0,
+  "captured_at": "2026-08-11T20:39:14.034341+00:00",
+  "class_counts": {
+    "benign": 11,
+    "phishing": 4
+  },
+  "dataset": "C:\\Users\\Pavan Bimsara\\Desktop\\QRShield\\Backend\\evaluation_dataset.csv",
+  "dataset_size": 15,
+  "evaluation_type": "URL-only lexical risk-engine baseline",
+  "failed_analyses": 0,
+  "full_scan_evaluation": "not_run; dataset contains suspicious/reserved/private destinations and no safe historical HTML corpus",
+  "policies": {
+    "policy_40": {
+      "accuracy": 0.9333333333333333,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 10,
+          "ground_truth_phishing": 0
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 1,
+          "ground_truth_phishing": 4
+        }
+      },
+      "f1": 0.888888888888889,
+      "false_negative_rate": 0.0,
+      "false_positive_rate": 0.09090909090909091,
+      "fn": 0,
+      "fp": 1,
+      "precision": 0.8,
+      "recall": 1.0,
+      "specificity": 0.9090909090909091,
+      "tn": 10,
+      "total": 15,
+      "tp": 4
+    },
+    "policy_70": {
+      "accuracy": 0.8666666666666667,
+      "confusion_matrix": {
+        "predicted_benign": {
+          "ground_truth_benign": 11,
+          "ground_truth_phishing": 2
+        },
+        "predicted_phishing": {
+          "ground_truth_benign": 0,
+          "ground_truth_phishing": 2
+        }
+      },
+      "f1": 0.6666666666666666,
+      "false_negative_rate": 0.5,
+      "false_positive_rate": 0.0,
+      "fn": 2,
+      "fp": 0,
+      "precision": 1.0,
+      "recall": 0.5,
+      "specificity": 1.0,
+      "tn": 11,
+      "total": 15,
+      "tp": 2
+    }
+  },
+  "redirect_data_available": false,
+  "redirect_feature_evaluated": false,
+  "risk_score_distribution": {
+    "benign": {
+      "count": 11,
+      "mean": 6.818181818181818,
+      "median": 0
+    },
+    "phishing": {
+      "count": 4,
+      "mean": 65,
+      "median": 67.5
+    }
+  },
+  "source_label_counts": {
+    "legitimate": 11,
+    "suspicious": 4
+  },
+  "successful_analyses": 15,
+  "thresholds": {
+    "policy_40_positive": "score >= 40",
+    "policy_70_positive": "score >= 70"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "phiusiil_rows_checked": 235795,
+  "external_removed_for_phiusiil_exact_overlap": 2118,
+  "external_removed_for_phiusiil_normalized_only_overlap": 29,
+  "cross_class_collision_removal": {
+    "phishing": 11,
+    "benign": 10,
+    "normalized_collision_keys": 10
+  },
+  "policy": "Exclude exact and normalized PhiUSIIL matches, then exclude normalized cross-class collisions from both external classes."
+}

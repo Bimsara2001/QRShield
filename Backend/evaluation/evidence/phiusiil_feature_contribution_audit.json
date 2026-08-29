@@ -1,0 +1,185 @@
+{
+  "development_phishing_false_negative_policy_40_reason_frequency": {
+    "domain_length": 1338,
+    "dot_count": 1437,
+    "hyphen": 19778,
+    "ip_address": 5,
+    "multiple_hyphens": 7066,
+    "non_https": 30862,
+    "suspicious_keywords": 3065,
+    "url_length": 5611
+  },
+  "features": [
+    {
+      "condition": "not url.startswith('https://')",
+      "feature": "https",
+      "reason_text": "URL does not use HTTPS",
+      "score_added": 15
+    },
+    {
+      "condition": "len(url) > 75",
+      "feature": "url_length",
+      "reason_text": "Very long URL",
+      "score_added": 10
+    },
+    {
+      "condition": "url.count('.') > 4",
+      "feature": "dot_count",
+      "reason_text": "Too many dots in URL",
+      "score_added": 10
+    },
+    {
+      "condition": "shortener substring in url.lower()",
+      "feature": "shortener",
+      "reason_text": "URL shortener detected",
+      "score_added": 40,
+      "values": [
+        "bit.ly",
+        "tinyurl.com",
+        "goo.gl",
+        "t.co",
+        "ow.ly",
+        "is.gd"
+      ]
+    },
+    {
+      "condition": "IPv4 regex matches anywhere in URL",
+      "feature": "ip_address",
+      "reason_text": "IP address used instead of domain",
+      "score_added": 25
+    },
+    {
+      "condition": "'-' in url",
+      "feature": "hyphen",
+      "reason_text": "Hyphenated URL detected",
+      "score_added": 10
+    },
+    {
+      "condition": "url.count('-') >= 2",
+      "feature": "multiple_hyphens",
+      "reason_text": "Multiple hyphens detected",
+      "score_added": 15
+    },
+    {
+      "condition": "url != final_url",
+      "feature": "redirect",
+      "reason_text": "URL redirected to another address",
+      "score_added": 10
+    },
+    {
+      "condition": "len(tldextract.extract(url).domain) > 20",
+      "feature": "domain_length",
+      "reason_text": "Suspiciously long domain name",
+      "score_added": 10
+    },
+    {
+      "condition": "'login' in url.lower()",
+      "feature": "suspicious_keyword:login",
+      "reason_text": "Suspicious keyword detected: login",
+      "score_added": 15
+    },
+    {
+      "condition": "'verify' in url.lower()",
+      "feature": "suspicious_keyword:verify",
+      "reason_text": "Suspicious keyword detected: verify",
+      "score_added": 15
+    },
+    {
+      "condition": "'secure' in url.lower()",
+      "feature": "suspicious_keyword:secure",
+      "reason_text": "Suspicious keyword detected: secure",
+      "score_added": 15
+    },
+    {
+      "condition": "'update' in url.lower()",
+      "feature": "suspicious_keyword:update",
+      "reason_text": "Suspicious keyword detected: update",
+      "score_added": 10
+    },
+    {
+      "condition": "'bank' in url.lower()",
+      "feature": "suspicious_keyword:bank",
+      "reason_text": "Suspicious keyword detected: bank",
+      "score_added": 15
+    },
+    {
+      "condition": "'account' in url.lower()",
+      "feature": "suspicious_keyword:account",
+      "reason_text": "Suspicious keyword detected: account",
+      "score_added": 10
+    },
+    {
+      "condition": "'password' in url.lower()",
+      "feature": "suspicious_keyword:password",
+      "reason_text": "Suspicious keyword detected: password",
+      "score_added": 20
+    },
+    {
+      "condition": "'wallet' in url.lower()",
+      "feature": "suspicious_keyword:wallet",
+      "reason_text": "Suspicious keyword detected: wallet",
+      "score_added": 15
+    },
+    {
+      "condition": "'crypto' in url.lower()",
+      "feature": "suspicious_keyword:crypto",
+      "reason_text": "Suspicious keyword detected: crypto",
+      "score_added": 10
+    },
+    {
+      "condition": "'free' in url.lower()",
+      "feature": "suspicious_keyword:free",
+      "reason_text": "Suspicious keyword detected: free",
+      "score_added": 10
+    },
+    {
+      "condition": "'bonus' in url.lower()",
+      "feature": "suspicious_keyword:bonus",
+      "reason_text": "Suspicious keyword detected: bonus",
+      "score_added": 10
+    },
+    {
+      "condition": "'gift' in url.lower()",
+      "feature": "suspicious_keyword:gift",
+      "reason_text": "Suspicious keyword detected: gift",
+      "score_added": 15
+    },
+    {
+      "condition": "'paypal' in url.lower()",
+      "feature": "suspicious_keyword:paypal",
+      "reason_text": "Suspicious keyword detected: paypal",
+      "score_added": 20
+    },
+    {
+      "condition": "'security' in url.lower()",
+      "feature": "suspicious_keyword:security",
+      "reason_text": "Suspicious keyword detected: security",
+      "score_added": 15
+    },
+    {
+      "condition": "'check' in url.lower()",
+      "feature": "suspicious_keyword:check",
+      "reason_text": "Suspicious keyword detected: check",
+      "score_added": 10
+    },
+    {
+      "condition": "'signin' in url.lower()",
+      "feature": "suspicious_keyword:signin",
+      "reason_text": "Suspicious keyword detected: signin",
+      "score_added": 15
+    },
+    {
+      "condition": "'confirm' in url.lower()",
+      "feature": "suspicious_keyword:confirm",
+      "reason_text": "Suspicious keyword detected: confirm",
+      "score_added": 15
+    }
+  ],
+  "source_file": "C:\\Users\\Pavan Bimsara\\Desktop\\QRShield\\Backend\\analyzer\\risk_engine.py",
+  "source_sha256": "2b6e26c1dd081e38931aeb24186114ab4c00e1a873f14b5406a96d54e7d9e167",
+  "verdict_ranges": {
+    "High Risk": "score >= 70",
+    "Low Risk": "score < 40",
+    "Medium Risk": "40 <= score < 70"
+  }
+}

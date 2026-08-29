@@ -1,0 +1,11 @@
+fixture_id,fixture_type,expected_security_intent,html_score,reasons
+plain_benign,benign_static,benign page without collection form,0,
+benign_search,benign_search_form,benign search interaction,0,
+benign_contact,benign_contact_form,benign contact collection,0,
+benign_newsletter,benign_newsletter_form,benign newsletter subscription,0,
+login_form,credential_form,credential collection,20,Password input field detected
+external_credential,external_credential_form,credential collection to different origin,30,Password input field detected | Credential form submits to an external destination
+suspicious_password,suspicious_language,credential collection with account language,20,Password input field detected
+hidden_iframe,hidden_iframe,embedded hidden content,10,iframe detected
+multiple_noncredential_forms,multiple_forms,multiple benign forms without credentials,0,
+fake_banking_login,banking_login_replica,controlled phishing-like credential page,45,Suspicious keyword detected: verify your account | Suspicious keyword detected: bank login | Suspicious keyword detected: confirm identity | Password input field detected | Credential form submits to an external destination

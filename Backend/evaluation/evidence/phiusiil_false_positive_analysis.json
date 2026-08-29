@@ -1,0 +1,442 @@
+{
+  "false_positive_count": 4969,
+  "policy": "score >= 40",
+  "reasons": [
+    {
+      "false_positive_count": 4961,
+      "percentage_of_false_positives": 99.83900181122962,
+      "reason": "URL shortener detected"
+    },
+    {
+      "false_positive_count": 337,
+      "percentage_of_false_positives": 6.782048701952103,
+      "reason": "Hyphenated URL detected"
+    },
+    {
+      "false_positive_count": 180,
+      "percentage_of_false_positives": 3.6224592473334676,
+      "reason": "Suspiciously long domain name"
+    },
+    {
+      "false_positive_count": 34,
+      "percentage_of_false_positives": 0.6842423022740994,
+      "reason": "Multiple hyphens detected"
+    },
+    {
+      "false_positive_count": 16,
+      "percentage_of_false_positives": 0.32199637754075267,
+      "reason": "Suspicious keyword detected: gift"
+    },
+    {
+      "false_positive_count": 14,
+      "percentage_of_false_positives": 0.28174683034815856,
+      "reason": "Suspicious keyword detected: free"
+    },
+    {
+      "false_positive_count": 13,
+      "percentage_of_false_positives": 0.2616220567518615,
+      "reason": "Suspicious keyword detected: wallet"
+    },
+    {
+      "false_positive_count": 10,
+      "percentage_of_false_positives": 0.2012477359629704,
+      "reason": "Suspicious keyword detected: bank"
+    },
+    {
+      "false_positive_count": 6,
+      "percentage_of_false_positives": 0.12074864157778226,
+      "reason": "Suspicious keyword detected: check"
+    },
+    {
+      "false_positive_count": 4,
+      "percentage_of_false_positives": 0.08049909438518817,
+      "reason": "Suspicious keyword detected: security"
+    },
+    {
+      "false_positive_count": 3,
+      "percentage_of_false_positives": 0.06037432078889113,
+      "reason": "Suspicious keyword detected: crypto"
+    },
+    {
+      "false_positive_count": 2,
+      "percentage_of_false_positives": 0.04024954719259408,
+      "reason": "Suspicious keyword detected: confirm"
+    },
+    {
+      "false_positive_count": 1,
+      "percentage_of_false_positives": 0.02012477359629704,
+      "reason": "Suspicious keyword detected: account"
+    },
+    {
+      "false_positive_count": 1,
+      "percentage_of_false_positives": 0.02012477359629704,
+      "reason": "Suspicious keyword detected: signin"
+    }
+  ],
+  "samples": [
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.saffronart.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000007",
+      "scan_status": "success",
+      "url_sha256": "484880c6210c311b31e0d226ef11279e1866f73b57d8da9cd96ebd813a0153a7",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.lanereport.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000063",
+      "scan_status": "success",
+      "url_sha256": "6c1b0efb4d9b3cecc00f6285936e6c4d6e8b100d053c18d1047c8a43d36c59a2",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.spket.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000113",
+      "scan_status": "success",
+      "url_sha256": "9aa3dc8c3dd527b4db530871c977030a5f91117e0e2193368a8e25e2653c2955",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.gunsmokenet.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000118",
+      "scan_status": "success",
+      "url_sha256": "cc6d0302f8ae2a009e00beddbea0b2085c3e19c734d505cd489035a8ad35c34e",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.areadevelopment.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000262",
+      "scan_status": "success",
+      "url_sha256": "f0cebeb0c1ecf87e6c11d659d590f5587dccda5a9911bace5899fb6e8ed39d7f",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.affenknecht.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000380",
+      "scan_status": "success",
+      "url_sha256": "b6cbb403b8acd702b762fcd384501063b372593ebe1eabb154f377df3b323c67",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.pressreleasepoint.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000394",
+      "scan_status": "success",
+      "url_sha256": "255726026115b359a101d1bceb1130ba4870d2342bdcdf6b218e8d6155cf8200",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.boortmalt.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000396",
+      "scan_status": "success",
+      "url_sha256": "5de0ea281474928139a9c0e4a72c9cc045d0b12f7808aa98b3567d5c31c7f233",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.balkaninstitut.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000451",
+      "scan_status": "success",
+      "url_sha256": "410339940552d6dfeb8ba4f16a76f348c77a2ce825fde665d29141b22dfdbc7c",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.kladionicabet.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000505",
+      "scan_status": "success",
+      "url_sha256": "356e46f934c343b87c69c521d2e64f84beb7272b89d0b9073c37334771f89a1d",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.nma-fallout.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected",
+        "Hyphenated URL detected"
+      ],
+      "risk_score": 50,
+      "sample_id": "phiusiil-000513",
+      "scan_status": "success",
+      "url_sha256": "b8cf8c09237949ce8e5dadd72b4a91be973a2b9016657dccd9de1b5bda418dae",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.fay-west.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected",
+        "Hyphenated URL detected"
+      ],
+      "risk_score": 50,
+      "sample_id": "phiusiil-000547",
+      "scan_status": "success",
+      "url_sha256": "7265cf6394755e68d0684e1d40eaea3a44efac21c5e8e73665c757715e5af93b",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.waynemadsenreport.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000586",
+      "scan_status": "success",
+      "url_sha256": "935ceb681d1b55cab52178b0fb9feb2010bccaf9b4385a087400da6cc0ae254c",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.rotax-kart.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected",
+        "Hyphenated URL detected"
+      ],
+      "risk_score": 50,
+      "sample_id": "phiusiil-000596",
+      "scan_status": "success",
+      "url_sha256": "befc60f3fabad62c904d52cf98541baa4a5171ef5963149c71ce9993a78f11ac",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.koozyt.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000611",
+      "scan_status": "success",
+      "url_sha256": "f695a2a2b909706633f090db4c7cf04c8a96adbb3a3df17afc85af27cbe02312",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.doverport.co.uk",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000651",
+      "scan_status": "success",
+      "url_sha256": "7139492f68100e45f1d33fdd163450da291af0c2264d95665599631648d72ebc",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.hangoutmusicfest.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000665",
+      "scan_status": "success",
+      "url_sha256": "2335894134941f27edfd9ccfe364fac0a704a0762d07346a773e997b4d14e0da",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.goldstandard-gamsat.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected",
+        "Hyphenated URL detected"
+      ],
+      "risk_score": 50,
+      "sample_id": "phiusiil-000679",
+      "scan_status": "success",
+      "url_sha256": "c5808fa105fb933dbc336bdc6f19e261ae0b7aca1b20024e4361781191cb5b60",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.mrbreakfast.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000726",
+      "scan_status": "success",
+      "url_sha256": "5f66cc98a84b33cb04699b97e69a221530ed09a670bb638cfd0dd29114a5083d",
+      "verdict": "Medium Risk"
+    },
+    {
+      "correct_policy_40": false,
+      "correct_policy_70": true,
+      "domain": "www.venuereport.com",
+      "failure_category": null,
+      "ground_truth": "benign",
+      "original_dataset_label": 1,
+      "predicted_policy_40": "phishing",
+      "predicted_policy_70": "benign",
+      "reasons": [
+        "URL shortener detected"
+      ],
+      "risk_score": 40,
+      "sample_id": "phiusiil-000786",
+      "scan_status": "success",
+      "url_sha256": "cd79e66c34de70fa826f8e4ac7c71afeee027812f709536ea53891789807752d",
+      "verdict": "Medium Risk"
+    }
+  ]
+}

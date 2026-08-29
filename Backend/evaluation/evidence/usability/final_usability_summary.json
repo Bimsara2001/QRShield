@@ -1,0 +1,74 @@
+{
+  "report": "QRShield Final Usability Evaluation",
+  "analysis_type": "descriptive analysis of final Google Forms usability responses",
+  "source_file": "evaluation/data/usability/QRShield Usability Evaluation (Responses) .xlsx",
+  "source_sha256": "35067ac8bb90fa53e43ffca12b7683c721cc627750b97c742c6367975db8c07c",
+  "validation": {
+    "total_responses": 5,
+    "unique_participant_ids": ["P1", "P2", "P3", "P4", "P5"],
+    "expected_participant_ids_present": true,
+    "duplicate_participant_ids": [],
+    "missing_required_responses": [],
+    "invalid_task_responses": [],
+    "invalid_likert_values": [],
+    "unexpected_columns_or_questions": [],
+    "system_metadata_columns": ["Timestamp"],
+    "optional_blank_responses": {
+      "What improvement would you recommend for QRShield?": 2
+    },
+    "dataset_valid_for_intended_analysis": true
+  },
+  "participants": {
+    "valid_participant_count": 5,
+    "device_summary": {"Android Phone": 3, "Android Emulator": 2}
+  },
+  "analysis_method": {
+    "task_success_definition": "Completed easily or Completed with difficulty",
+    "task_denominator": 5,
+    "likert_scales": {
+      "nielsen": "1 = Very Poor; 5 = Excellent",
+      "qrshield_experience": "1 = Strongly Disagree; 5 = Strongly Agree"
+    },
+    "standard_deviation": "sample standard deviation (N-1)"
+  },
+  "task_completion": {
+    "total_task_observations": 45,
+    "successful_completions": 45,
+    "completed_easily": 43,
+    "completed_with_difficulty": 2,
+    "failures": 0,
+    "overall_task_success_rate_percent": 100.0,
+    "overall_easy_completion_rate_percent": 95.56,
+    "most_difficulty_or_failures": [{"task_id": "T1", "difficulty_count": 2, "failure_count": 0}]
+  },
+  "nielsen_heuristics": {
+    "overall_mean": 4.92,
+    "overall_response_count": 50,
+    "highest_rated": ["Visibility of system status", "Consistency and standards", "Error prevention", "Recognition rather than recall", "Flexibility and efficiency of use", "Aesthetic and minimalist design", "Help users recognize, diagnose, and recover from errors", "Help and documentation"],
+    "highest_mean": 5.0,
+    "lowest_rated": ["Match between system and the real world", "User control and freedom"],
+    "lowest_mean": 4.6
+  },
+  "qrshield_experience": {
+    "overall_mean": 4.942857142857143,
+    "overall_response_count": 35,
+    "highest_rated": ["The QR scanning process was easy to understand", "The risk score was easy to understand", "The destination screenshot or preview was useful", "The reasons shown for detected security risks were understandable", "Overall, QRShield was easy to use"],
+    "highest_mean": 5.0,
+    "lowest_rated": ["Low Risk, Medium Risk, or High Risk results were clear", "I would feel more confident checking an unfamiliar QR code with QRShield before opening it"],
+    "lowest_mean": 4.8
+  },
+  "evidence_files": [
+    "evaluation/evidence/usability/final_usability_task_results.csv",
+    "evaluation/evidence/usability/final_usability_nielsen_results.csv",
+    "evaluation/evidence/usability/final_usability_experience_results.csv",
+    "evaluation/evidence/usability/final_usability_qualitative_summary.json"
+  ],
+  "p0_usability_requirement_status": "COMPLETE",
+  "limitations": [
+    "Small usability sample (N=5).",
+    "Recruitment documentation does not establish random sampling; treat this as a convenience/usability evaluation sample.",
+    "Likert results are self-reported.",
+    "Task completion was measured in a controlled evaluation context.",
+    "The results should not be generalized to the entire population or used to claim statistical significance."
+  ]
+}

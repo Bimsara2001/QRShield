@@ -1,0 +1,35 @@
+{
+  "development_threshold": 10,
+  "metrics": [
+    {
+      "development": 0.8489181507047973,
+      "holdout": 0.84888602966073,
+      "holdout_minus_development": -3.212104406724592e-05,
+      "metric": "precision"
+    },
+    {
+      "development": 0.8284343555851177,
+      "holdout": 0.8278628978998811,
+      "holdout_minus_development": -0.0005714576852365871,
+      "metric": "recall"
+    },
+    {
+      "development": 0.8385511792976501,
+      "holdout": 0.8382426694306061,
+      "holdout_minus_development": -0.0003085098670440045,
+      "metric": "f1"
+    },
+    {
+      "development": 0.11036601514910747,
+      "holdout": 0.11032010876282289,
+      "holdout_minus_development": -4.590638628458599e-05,
+      "metric": "false_positive_rate"
+    },
+    {
+      "development": 0.8590341702180051,
+      "holdout": 0.8587713945685291,
+      "holdout_minus_development": -0.0002627756494759659,
+      "metric": "balanced_accuracy"
+    }
+  ]
+}

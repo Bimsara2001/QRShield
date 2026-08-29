@@ -1,0 +1,21 @@
+{
+  "experiment": "H5B3 structural iframe precision fix",
+  "server": "current Backend venv on temporary port 8004",
+  "example_com": {
+    "status": "success",
+    "risk_score": 0,
+    "verdict": "Low Risk",
+    "reasons": [],
+    "title": "Example Domain",
+    "virustotal_status": "success"
+  },
+  "google": {
+    "status": "success",
+    "risk_score": 10,
+    "verdict": "Medium Risk",
+    "reasons": ["URL redirected to another address"],
+    "title": "Google",
+    "virustotal_status": "success"
+  },
+  "note": "No new iframe finding was introduced for either live page; Google retains only its existing redirect signal."
+}

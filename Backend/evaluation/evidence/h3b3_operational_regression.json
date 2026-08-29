@@ -1,0 +1,45 @@
+{
+  "experiment": "H3B3 redirect canonicalization fix",
+  "thresholds": {
+    "screening": 10,
+    "high_risk": 70
+  },
+  "previous_h3b1_risk_engine_sha256": "121b64d4826f01f604b75a1ac15e1aef1a6b492e2b5e80f29c3ffdeba2dbefa6",
+  "new_h3b3_risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "deterministic_analyzer_checks": {
+    "example_canonicalization": {
+      "original": "https://example.com",
+      "final": "https://example.com/",
+      "score": 0,
+      "verdict": "SAFE",
+      "reasons": []
+    },
+    "wikipedia_canonicalization": {
+      "original": "https://www.wikipedia.org",
+      "final": "https://www.wikipedia.org/",
+      "score": 0,
+      "verdict": "SAFE",
+      "reasons": []
+    }
+  },
+  "live_run_sandbox_attempts": {
+    "example.com": {
+      "status": "not_completed",
+      "failure_category": "sandbox_infrastructure_unavailable",
+      "message": "Secure sandbox infrastructure is unavailable."
+    },
+    "www.wikipedia.org": {
+      "status": "not_completed",
+      "failure_category": "sandbox_infrastructure_unavailable",
+      "message": "Secure sandbox infrastructure is unavailable."
+    }
+  },
+  "live_scan_attempts": {
+    "status": "not_executed",
+    "failure_category": "MongoDB_configuration_dns_unavailable",
+    "note": "Importing the production route could not initialize the configured MongoDB SRV client in this environment."
+  },
+  "note": "The local Docker environment did not expose qrshield-worker-isolated, and the configured MongoDB SRV host was unavailable. Live /scan and screenshot regressions require rerunning with production infrastructure available.",
+  "development_only": true,
+  "holdout_touched": false
+}

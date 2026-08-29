@@ -1,0 +1,81 @@
+{
+  "screenshot_validation": {
+    "status": "PASS",
+    "verification_type": "manual operational verification",
+    "api_port": 8004,
+    "http_status": 200,
+    "content_type": "image/png",
+    "observed_sizes_bytes": {
+      "https://example.com": 15909,
+      "https://www.wikipedia.org": 190003,
+      "https://www.python.org": 396997,
+      "https://www.iana.org": 106530
+    },
+    "unobserved_values": {
+      "https://google.com": "Screenshot byte size was not recorded; no value is claimed."
+    }
+  },
+  "mongodb_persistence": {
+    "status": "PASS",
+    "verification_type": "manual operational verification; not an automated database test",
+    "confirmed_safe_live_scans": [
+      "Google",
+      "Example.com",
+      "Wikipedia",
+      "Python.org",
+      "IANA"
+    ]
+  },
+  "sandbox_lifecycle": {
+    "status": "PASS",
+    "verification_type": "direct Docker CLI check",
+    "command": "docker ps -a --filter \"name=qrshield-scan-\"",
+    "scan_workers_found": 0,
+    "ephemeral_worker_cleanup": "PASS",
+    "persistent_infrastructure_component": "qrshield-egress-proxy",
+    "proxy_status": "Up"
+  },
+  "private_target_fail_closed_validation": {
+    "status": "PASS",
+    "verification_type": "H6 operational result",
+    "request": {
+      "method": "POST",
+      "path": "/scan",
+      "body": {
+        "url": "http://127.0.0.1"
+      }
+    },
+    "response": {
+      "status": "error",
+      "message": "URL is not allowed for analysis."
+    },
+    "scope": "Private/localhost target blocking; no additional unsafe targets were attempted."
+  },
+  "infrastructure_recovery_context": {
+    "status": "PASS",
+    "incident": "Docker Desktop was stopped after WSL shutdown.",
+    "diagnosis": "The resulting sandbox failure was unavailable Docker infrastructure, not a detector failure.",
+    "after_docker_desktop_restart": {
+      "qrshield-worker-isolated_exists": true,
+      "qrshield-proxy-egress_exists": true,
+      "qrshield-egress-proxy_running": true,
+      "direct_run_sandbox_example_com_succeeded": true
+    },
+    "accuracy_accounting": "The infrastructure outage is not counted as a detection-accuracy failure."
+  },
+  "current_direct_docker_check": {
+    "qrshield_worker_isolated_exists": true,
+    "qrshield_proxy_egress_exists": true,
+    "qrshield_egress_proxy_running": true
+  },
+  "limitations": [
+    "H6 safe-live checks are an operational integration evaluation, not a phishing accuracy benchmark.",
+    "No active phishing URLs were visited for H6.",
+    "H3C remains the frozen URL-only labelled holdout accuracy evaluation.",
+    "H5C remains controlled HTML heuristic validation.",
+    "VirusTotal is supplementary intelligence, not ground truth.",
+    "The backend response emits screenshot URLs using localhost:8000; Flutter currently normalizes backend asset URLs for the configured development backend. This is an environment/configuration limitation and was not changed during H6.",
+    "The H6 sample is intentionally small and safe.",
+    "H6 does not establish 100% phishing detection or perfect security."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "controlled_validation_only": true,
+  "active_phishing_sites_visited": false,
+  "independent_labelled_html_dataset_evaluated": false,
+  "credential_language": "small manually defined phrase list",
+  "same_host_policy": "hostname comparison, not eTLD+1/site-aware",
+  "eval_detection": "regex-based script-scoped detection, not a JavaScript parser",
+  "iframe_interpretation": "iframe presence alone does not prove phishing",
+  "password_interpretation": "password fields also occur on legitimate sites",
+  "combined_interpretation": "HTML score must be interpreted with URL lexical and other QRShield signals"
+}

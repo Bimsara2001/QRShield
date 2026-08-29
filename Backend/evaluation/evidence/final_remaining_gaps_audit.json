@@ -1,0 +1,42 @@
+{
+  "report": "QRShield Final Remaining-Gaps Close-Out Audit",
+  "audit_scope": "All non-complete proposal-compliance entries at audit start: D2, I4, H5.",
+  "production_code_changed": false,
+  "live_phishing_urls_visited": false,
+  "status_before": {"COMPLETE": 39, "PARTIAL": 2, "IN PROGRESS": 0, "OUTSTANDING": 1},
+  "items": [
+    {
+      "id": "D2",
+      "requirement": "Graceful external-intelligence failure handling",
+      "status_before": "PARTIAL",
+      "evidence_inspected": ["threat_intel/virustotal.py", "main.py", "evidence/external_intelligence_failure_handling_evidence.json"],
+      "gap_classification": "B: evaluation/evidence gap",
+      "decision": "COMPLETE",
+      "justification": "Existing structured error handling passed controlled no-network checks for non-200 and exception paths, and the scan continued with a VirusTotal error result.",
+      "limitations": ["No availability/retry/timeout assurance.", "Exception text is not established as sanitized."]
+    },
+    {
+      "id": "I4",
+      "requirement": "Privacy/minimal personal-data approach",
+      "status_before": "PARTIAL",
+      "evidence_inspected": ["PRIVACY_AND_DATA_HANDLING_EVIDENCE.md", "evidence/privacy/data_handling_evidence.json"],
+      "gap_classification": "C: missing user-facing disclosure; D: actual retention, access-control, and credential-management gaps",
+      "decision": "PARTIAL",
+      "justification": "History clearing does not delete successful screenshots, no retention/access-control/privacy-notice evidence exists, and hard-coded service credentials were found in tracked source.",
+      "required_next_action": "Implement and verify secrets management/rotation, screenshot-aware retention/deletion, access control, and accurate user disclosure."
+    },
+    {
+      "id": "H5",
+      "requirement": "Labelled rendered-page/sandbox phishing-accuracy benchmark",
+      "status_before": "OUTSTANDING",
+      "evidence_inspected": ["html/H5_FINAL_EVALUATION.md", "evidence/h5c_html_detector_freeze.json", "evidence/h5c_html_detector_limitations.json", "full_pipeline/README.md", "evidence/full_pipeline_independent_summary.json"],
+      "gap_classification": "B: evaluation gap",
+      "decision": "OUTSTANDING",
+      "justification": "H5 fixtures were controlled development validation, while the separate 50-case synthetic evaluation does not render pages or exercise the sandbox. Neither is an independent labelled rendered-page/sandbox benchmark.",
+      "required_next_action": "Evaluate the frozen browser/sandbox workflow on a safely handled independently labelled rendered-page corpus, without tuning."
+    }
+  ],
+  "status_after": {"COMPLETE": 40, "PARTIAL": 1, "IN PROGRESS": 0, "OUTSTANDING": 1},
+  "overall_status_after": "PARTIAL",
+  "highest_priority_next_action": "Address I4 with an implemented and verified data-handling design covering secret rotation, screenshot-aware retention/deletion, access control, and user disclosure."
+}

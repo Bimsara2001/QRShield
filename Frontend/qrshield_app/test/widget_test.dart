@@ -1,30 +1,37 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:qrshield_app/main.dart';
+import 'package:qrshield_app/theme/app_colors.dart';
+import 'package:qrshield_app/theme/app_theme.dart';
+import 'package:qrshield_app/widgets/screen_header.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const MyApp());
+  testWidgets('renders the QRShield visual system', (tester) async {
+    // The production theme uses Google Fonts. The smoke test deliberately uses
+    // system text styles so it remains offline and does not require a font
+    // download, backend, or camera.
+    final smokeTheme = AppTheme.darkTheme.copyWith(
+      textTheme: ThemeData.dark().textTheme,
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    await tester.pumpWidget(
+      MaterialApp(
+        theme: smokeTheme,
+        home: const Scaffold(
+          body: Center(
+            child: ScreenHeader(
+              title: 'QRShield',
+              subtitle: 'Advanced QR Threat Detection',
+            ),
+          ),
+        ),
+      ),
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    expect(find.text('QRShield'), findsOneWidget);
+    expect(find.text('Advanced QR Threat Detection'), findsOneWidget);
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    final context = tester.element(find.byType(Scaffold));
+    expect(Theme.of(context).brightness, Brightness.dark);
+    expect(Theme.of(context).scaffoldBackgroundColor, AppColors.background);
   });
 }

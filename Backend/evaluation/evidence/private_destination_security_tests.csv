@@ -1,0 +1,11 @@
+test_id,destination_type,target,security_layer,expected,observed,result
+H1-PRIVATE-01,ipv4_loopback,http://127.0.0.1/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-02,ipv4_private,http://10.0.0.1/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-03,ipv4_private,http://172.16.0.1/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-04,ipv4_private,http://192.168.1.1/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-05,metadata_link_local,http://169.254.169.254/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-06,ipv6_loopback,http://[::1]/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-07,ipv6_private,http://[fc00::1]/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-08,ipv6_link_local,http://[fe80::1]/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-09,docker_host_alias,http://host.docker.internal/,Squid destination ACL,blocked_http_403,http_403,PASS
+H1-PRIVATE-10,docker_gateway_alias,http://gateway.docker.internal/,Squid destination ACL,blocked_http_403,http_403,PASS

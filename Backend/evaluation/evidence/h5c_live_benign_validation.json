@@ -1,0 +1,8 @@
+{
+  "controlled_live_targets": [
+    {"url":"https://example.com","status":"success","risk_score":0,"verdict":"Low Risk","reasons":[],"screenshot_http_status":200,"virustotal_status":"success","html_contribution_observation":"0"},
+    {"url":"https://google.com","status":"success","risk_score":10,"verdict":"Medium Risk","reasons":["URL redirected to another address"],"screenshot_http_status":200,"virustotal_status":"success","html_contribution_observation":"No credential/form/iframe/eval finding; score is redirect signal"},
+    {"url":"https://www.wikipedia.org","status":"success","risk_score":0,"verdict":"Low Risk","reasons":[],"screenshot_http_status":200,"virustotal_status":"success","html_contribution_observation":"0"}
+  ],
+  "note": "Safe operational checks only; these are not HTML detector accuracy measurements."
+}

@@ -1,0 +1,8 @@
+experience_item,question,n,mean,median,minimum,maximum,sample_standard_deviation
+1,"The QR scanning process was easy to understand",5,5.00,5.00,5,5,0.000
+2,"Low Risk, Medium Risk, or High Risk results were clear",5,4.80,5.00,4,5,0.447
+3,"The risk score was easy to understand",5,5.00,5.00,5,5,0.000
+4,"The destination screenshot or preview was useful",5,5.00,5.00,5,5,0.000
+5,"The reasons shown for detected security risks were understandable",5,5.00,5.00,5,5,0.000
+6,"I would feel more confident checking an unfamiliar QR code with QRShield before opening it",5,4.80,5.00,4,5,0.447
+7,"Overall, QRShield was easy to use",5,5.00,5.00,5,5,0.000

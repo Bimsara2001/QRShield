@@ -1,0 +1,31 @@
+{
+  "captured_at": "2026-08-11T20:14:33.514077+00:00",
+  "docker_engine": {
+    "ApiVersion": "1.54",
+    "Os": "linux",
+    "Version": "29.5.2"
+  },
+  "proxy": {
+    "name": "qrshield-egress-proxy",
+    "network_memberships": [
+      "qrshield-proxy-egress",
+      "qrshield-worker-isolated"
+    ],
+    "published_host_ports": false,
+    "running": true
+  },
+  "proxy_egress_network": {
+    "gateway": "172.28.241.1",
+    "gateway_mode_ipv4": null,
+    "internal": false,
+    "name": "qrshield-proxy-egress",
+    "subnet": "172.28.241.0/24"
+  },
+  "worker_isolated_network": {
+    "gateway": null,
+    "gateway_mode_ipv4": "isolated",
+    "internal": true,
+    "name": "qrshield-worker-isolated",
+    "subnet": "172.28.240.0/24"
+  }
+}

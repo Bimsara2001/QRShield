@@ -1,0 +1,29 @@
+{
+  "controlled_phishing_like_cases": [
+    {
+      "fixture_id": "external_credential",
+      "score": 30,
+      "reasons": [
+        "Page contains HTML forms",
+        "Password input field detected"
+      ],
+      "ignored_signals": [
+        "external form action",
+        "credential-language context"
+      ]
+    },
+    {
+      "fixture_id": "suspicious_password",
+      "score": 30,
+      "reasons": [
+        "Page contains HTML forms",
+        "Password input field detected"
+      ],
+      "ignored_signals": [
+        "external form action",
+        "credential-language context"
+      ]
+    }
+  ],
+  "observation": "The current detector counts password fields but does not inspect form action origin or contextual credential language as separate signals."
+}

@@ -1,0 +1,7 @@
+# Keep the sandbox build context limited to these four worker files.
+*
+!Dockerfile
+!worker.py
+!network_guard.py
+!requirements.txt
+!.dockerignore

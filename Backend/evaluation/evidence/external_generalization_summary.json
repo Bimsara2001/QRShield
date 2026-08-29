@@ -1,0 +1,95 @@
+{
+  "evaluation_label": "External URL Generalizability Validation",
+  "scope": "Offline URL text only; frozen analyze_url(url, url), no redirect data or network access.",
+  "frozen_hashes_before_and_during_evaluation": {
+    "analyzer/risk_engine.py": "e837e453313a5507ac75f598884c929f929a08ca1a560d50a9cbc9919c1c00e1",
+    "detectors/phishing_detector.py": "1bffa7d2099ff9411bca4035334033bcee1308fec31a367d71c962f5c27a628a"
+  },
+  "decision_policy": "phishing if risk score >= 10, the frozen H3C screening policy; no threshold was derived or changed.",
+  "final_counts": {
+    "total": 20000,
+    "phishing": 10000,
+    "legitimate": 10000
+  },
+  "metrics": {
+    "tp": 7352,
+    "tn": 9076,
+    "fp": 924,
+    "fn": 2648,
+    "total": 20000,
+    "accuracy": 0.8214,
+    "precision": 0.88835186080232,
+    "recall": 0.7352,
+    "f1": 0.8045524184723133,
+    "specificity": 0.9076,
+    "false_positive_rate": 0.0924,
+    "false_negative_rate": 0.2648,
+    "confusion_matrix": {
+      "predicted_benign": {
+        "ground_truth_benign": 9076,
+        "ground_truth_phishing": 2648
+      },
+      "predicted_phishing": {
+        "ground_truth_benign": 924,
+        "ground_truth_phishing": 7352
+      }
+    }
+  },
+  "score_distributions": {
+    "all": {
+      "count": 20000,
+      "mean": 9.489,
+      "median": 0.0,
+      "minimum": 0,
+      "maximum": 85,
+      "bands": {
+        "0": 11724,
+        "1_9": 0,
+        "10_19": 3381,
+        "20_29": 2932,
+        "30_39": 564,
+        "40_69": 1359,
+        "70_plus": 40
+      }
+    },
+    "phishing": {
+      "count": 10000,
+      "mean": 17.8975,
+      "median": 15.0,
+      "minimum": 0,
+      "maximum": 85,
+      "bands": {
+        "0": 2648,
+        "1_9": 0,
+        "10_19": 2530,
+        "20_29": 2879,
+        "30_39": 551,
+        "40_69": 1352,
+        "70_plus": 40
+      }
+    },
+    "legitimate": {
+      "count": 10000,
+      "mean": 1.0805,
+      "median": 0.0,
+      "minimum": 0,
+      "maximum": 40,
+      "bands": {
+        "0": 9076,
+        "1_9": 0,
+        "10_19": 851,
+        "20_29": 53,
+        "30_39": 13,
+        "40_69": 7,
+        "70_plus": 0
+      }
+    }
+  },
+  "limitations": [
+    "PhishTank is a time-varying verified-online phishing feed; label lifetime and feed coverage constrain generalization.",
+    "Tranco is a popularity ranking used as a benign proxy, not a per-URL benign verification service.",
+    "The balanced 10,000-per-class sample is not a prevalence estimate.",
+    "No content, redirects, HTML, browser/sandbox, DNS, reputation, VirusTotal, MongoDB, or live URL retrieval is evaluated.",
+    "H3C and this external validation remain separate; no statistical significance test was performed."
+  ]
+}

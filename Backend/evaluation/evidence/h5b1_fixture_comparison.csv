@@ -1,0 +1,11 @@
+fixture_id,score_before,score_after,reasons_before,reasons_after
+plain_benign,0,0,,
+benign_search,10,0,Page contains HTML forms,
+benign_contact,10,0,Page contains HTML forms,
+benign_newsletter,10,0,Page contains HTML forms,
+login_form,30,20,Page contains HTML forms | Password input field detected,Password input field detected
+external_credential,30,20,Page contains HTML forms | Password input field detected,Password input field detected
+suspicious_password,30,20,Page contains HTML forms | Password input field detected,Password input field detected
+hidden_iframe,10,10,iframe detected,iframe detected
+multiple_noncredential_forms,10,0,Page contains HTML forms,
+fake_banking_login,45,35,Suspicious keyword detected: verify your account | Suspicious keyword detected: bank login | Suspicious keyword detected: confirm identity | Page contains HTML forms | Password input field detected,Suspicious keyword detected: verify your account | Suspicious keyword detected: bank login | Suspicious keyword detected: confirm identity | Password input field detected

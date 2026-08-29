@@ -1,0 +1,51 @@
+case_id,expected_label,synthetic_url,local_html_fixture_path,rationale,source
+B01,benign,https://search.example/catalog,fixtures/b01_search_page.html,Static site-search model; no credential collection.,synthetic_offline_evaluation
+B02,benign,https://docs.example/getting-started,fixtures/b02_documentation_page.html,Ordinary product documentation.,synthetic_offline_evaluation
+B03,benign,https://university.example/admissions,fixtures/b03_university_page.html,University admissions information only.,synthetic_offline_evaluation
+B04,benign,https://shop.example/products/linen-notebook,fixtures/b04_ecommerce_product.html,Product listing with a non-credential cart control.,synthetic_offline_evaluation
+B05,benign,https://journal.example/articles/growing-herbs,fixtures/b05_blog_article.html,Normal editorial article.,synthetic_offline_evaluation
+B06,benign,https://member.example/dashboard,fixtures/b06_account_dashboard.html,Read-only member dashboard without a form.,synthetic_offline_evaluation
+B07,benign,https://portal.example/signin,fixtures/b07_ordinary_login.html,Legitimate-style ordinary login represented locally and inertly.,synthetic_offline_evaluation
+B08,benign,https://help.example/reset,fixtures/b08_password_reset.html,Legitimate-style reset page represented locally and inertly.,synthetic_offline_evaluation
+B09,benign,https://creditunion.example/services,fixtures/b09_banking_information.html,"Local banking-services information, not a collection page.",synthetic_offline_evaluation
+B10,benign,https://support.example/contact,fixtures/b10_contact_support.html,Support contact form without credentials.,synthetic_offline_evaluation
+B11,benign,https://weather.example/colombo,fixtures/b11_weather_page.html,Informational weather forecast.,synthetic_offline_evaluation
+B12,benign,https://recipes.example/soup,fixtures/b12_recipe_page.html,Static cooking recipe.,synthetic_offline_evaluation
+B13,benign,https://library.example/events,fixtures/b13_library_events.html,Public library events listing.,synthetic_offline_evaluation
+B14,benign,https://travel.example/guide/coast,fixtures/b14_travel_guide.html,Travel guide with no transactional fields.,synthetic_offline_evaluation
+B15,benign,https://status.example/,fixtures/b15_service_status.html,Routine public service-status page.,synthetic_offline_evaluation
+B16,benign,https://forum.example/topics/gardening,fixtures/b16_forum_topic.html,Static discussion rendering.,synthetic_offline_evaluation
+B17,benign,https://museum.example/exhibits/maps,fixtures/b17_museum_page.html,Museum exhibit information.,synthetic_offline_evaluation
+B18,benign,https://news.example/local/market,fixtures/b18_news_article.html,Normal news article.,synthetic_offline_evaluation
+B19,benign,https://fitness.example/classes,fixtures/b19_fitness_schedule.html,Class schedule and booking information.,synthetic_offline_evaluation
+B20,benign,https://calendar.example/events,fixtures/b20_community_calendar.html,Community event list.,synthetic_offline_evaluation
+B21,benign,https://files.example/share/guide,fixtures/b21_file_share_landing.html,Static file-share landing page with no collection action.,synthetic_offline_evaluation
+B22,benign,https://education.example/course/history,fixtures/b22_course_page.html,Online-course informational page.,synthetic_offline_evaluation
+B23,benign,https://music.example/playlists/jazz,fixtures/b23_music_page.html,Playlist description only.,synthetic_offline_evaluation
+B24,benign,https://volunteer.example/opportunities,fixtures/b24_volunteer_page.html,Volunteer-opportunity listing.,synthetic_offline_evaluation
+B25,benign,https://knowledge.example/faq,fixtures/b25_faq_page.html,Frequently asked questions without a credential form.,synthetic_offline_evaluation
+P01,phishing,https://secure-verify-login.example/continue,fixtures/p01_urgent_verification_form.html,Synthetic urgent credential-verification pattern.,synthetic_offline_evaluation
+P02,phishing,https://bank-login-check.example/session,fixtures/p02_fake_banking_login.html,Synthetic banking-login wording with external-looking inert form action.,synthetic_offline_evaluation
+P03,phishing,https://wallet-security-update.example/,fixtures/p03_wallet_security_form.html,Synthetic wallet security update pattern.,synthetic_offline_evaluation
+P04,phishing,http://confirm-account.example/,fixtures/p04_http_confirmation.html,Synthetic non-HTTPS confirmation lure.,synthetic_offline_evaluation
+P05,phishing,https://paypa1-billing-login.example/,fixtures/p05_brand_typosquat_pattern.html,Synthetic lookalike-style URL and credential request.,synthetic_offline_evaluation
+P06,phishing,https://free-gift-claim.example/reward,fixtures/p06_reward_lure.html,Synthetic reward lure with credential request.,synthetic_offline_evaluation
+P07,phishing,https://crypto-wallet-verify.example/,fixtures/p07_crypto_wallet_lure.html,Synthetic crypto-wallet verification pattern.,synthetic_offline_evaluation
+P08,phishing,https://signin-security-alert.example/,fixtures/p08_security_alert.html,Synthetic sign-in security-alert pattern.,synthetic_offline_evaluation
+P09,phishing,https://account-check.example/,fixtures/p09_credential_iframe.html,Synthetic credential lure containing a structural iframe.,synthetic_offline_evaluation
+P10,phishing,https://verify.example/document,fixtures/p10_script_obfuscation_indicator.html,Synthetic verification lure with an eval indicator in executable script.,synthetic_offline_evaluation
+P11,phishing,https://secure-update.example/customer,fixtures/p11_external_password_action.html,External-looking inert password-form submission indicator.,synthetic_offline_evaluation
+P12,phishing,https://login-review.example/,fixtures/p12_identity_confirmation.html,Synthetic identity-confirmation lure.,synthetic_offline_evaluation
+P13,phishing,https://bank-secure-access.example/,fixtures/p13_bank_security_lure.html,Synthetic banking security wording.,synthetic_offline_evaluation
+P14,phishing,https://password-reset-notice.example/,fixtures/p14_reset_lure.html,Synthetic password-reset lure.,synthetic_offline_evaluation
+P15,phishing,https://bonus-confirm.example/,fixtures/p15_bonus_lure.html,Synthetic bonus confirmation lure.,synthetic_offline_evaluation
+P16,phishing,https://secure-login-verify.example/,fixtures/p16_multi_signal_lure.html,Synthetic multi-signal credential page.,synthetic_offline_evaluation
+P17,phishing,https://update-customer-security.example/,fixtures/p17_suspicious_url_and_form.html,Synthetic update/security credential page.,synthetic_offline_evaluation
+P18,phishing,https://login-verify-center.example/,fixtures/p18_verification_centre.html,Synthetic login-verification centre.,synthetic_offline_evaluation
+P19,phishing,https://gift-account-check.example/,fixtures/p19_gift_account_lure.html,Synthetic gift-account lure.,synthetic_offline_evaluation
+P20,phishing,https://security-confirm-login.example/,fixtures/p20_confirmation_lure.html,Synthetic security confirmation lure.,synthetic_offline_evaluation
+P21,phishing,https://portal.example/notice,fixtures/p21_misleading_link_only.html,Synthetic misleading-link lure intentionally lacking scored URL/form indicators.,synthetic_offline_evaluation
+P22,phishing,https://support.example/notice,fixtures/p22_callback_lure_only.html,Synthetic callback lure intentionally lacking scored HTML indicators.,synthetic_offline_evaluation
+P23,phishing,https://portal.example/files,fixtures/p23_attachment_lure_only.html,Synthetic attachment lure intentionally lacking scored indicators.,synthetic_offline_evaluation
+P24,phishing,https://notice.example/receipt,fixtures/p24_visual_impersonation_only.html,Synthetic visual-impersonation-style page with no implemented lexical or structural signal.,synthetic_offline_evaluation
+P25,phishing,https://service.example/message,fixtures/p25_embedded_content_lure.html,Synthetic embedded-content lure; an iframe is an explicit implemented signal.,synthetic_offline_evaluation

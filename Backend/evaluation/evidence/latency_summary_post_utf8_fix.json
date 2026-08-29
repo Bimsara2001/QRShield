@@ -1,0 +1,53 @@
+{
+  "by_domain": {
+    "example.com": {
+      "count": 13,
+      "failed_scans": 0,
+      "maximum": 5.561939,
+      "mean": 3.5734513846153844,
+      "minimum": 2.936825,
+      "successful_scans": 13
+    },
+    "www.iana.org": {
+      "count": 12,
+      "failed_scans": 0,
+      "maximum": 12.442203,
+      "mean": 5.1088465,
+      "minimum": 4.115971,
+      "successful_scans": 12
+    },
+    "www.python.org": {
+      "count": 12,
+      "failed_scans": 0,
+      "maximum": 5.920358,
+      "mean": 4.781677,
+      "minimum": 4.179395,
+      "successful_scans": 12
+    },
+    "www.wikipedia.org": {
+      "count": 13,
+      "failed_scans": 0,
+      "maximum": 6.343662,
+      "mean": 4.043787461538462,
+      "minimum": 3.478991,
+      "successful_scans": 13
+    }
+  },
+  "count": 50,
+  "failed_scans": 0,
+  "maximum": 12.442203,
+  "mean": 4.35420774,
+  "measurement": "overall_fastapi_scan_latency_seconds_post_utf8_fix",
+  "median": 4.221345,
+  "minimum": 2.936825,
+  "p90_nearest_rank": 4.972364,
+  "p95_nearest_rank": 5.920358,
+  "standard_deviation": 1.3804447765530514,
+  "successful_scans": 50,
+  "targets": [
+    "https://example.com",
+    "https://www.wikipedia.org",
+    "https://www.python.org",
+    "https://www.iana.org"
+  ]
+}

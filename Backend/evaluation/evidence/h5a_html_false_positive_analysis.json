@@ -1,0 +1,30 @@
+{
+  "controlled_benign_forms": [
+    {
+      "fixture_id": "benign_search",
+      "score": 10,
+      "reasons": ["Page contains HTML forms"],
+      "why_broad": "Any form element receives +10 regardless of input purpose or action origin."
+    },
+    {
+      "fixture_id": "benign_contact",
+      "score": 10,
+      "reasons": ["Page contains HTML forms"],
+      "why_broad": "Any form element receives +10 regardless of input purpose or action origin."
+    },
+    {
+      "fixture_id": "benign_newsletter",
+      "score": 10,
+      "reasons": ["Page contains HTML forms"],
+      "why_broad": "Any form element receives +10 regardless of input purpose or action origin."
+    },
+    {
+      "fixture_id": "multiple_noncredential_forms",
+      "score": 10,
+      "reasons": ["Page contains HTML forms"],
+      "why_broad": "Any form element receives +10 regardless of input purpose or action origin."
+    }
+  ],
+  "generic_form_trigger_count": 4,
+  "observation": "Search, contact, newsletter, and multiple non-credential forms all receive the same generic form score."
+}

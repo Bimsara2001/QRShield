@@ -1,0 +1,5 @@
+qrshield.test:53 {
+    errors
+    log
+    file /etc/coredns/db.phase2-private qrshield.test.
+}

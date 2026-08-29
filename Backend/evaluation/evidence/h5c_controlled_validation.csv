@@ -1,0 +1,27 @@
+fixture_id,fixture_type,intent,expected_outcome,observed_score,observed_reasons,pass
+plain_benign,benign_static,BENIGN,no new contextual HTML signal,0,,True
+benign_search,benign_search_form,BENIGN,no new contextual HTML signal,0,,True
+benign_contact,benign_contact_form,BENIGN,no new contextual HTML signal,0,,True
+benign_newsletter,benign_newsletter_form,BENIGN,no new contextual HTML signal,0,,True
+login_form,credential_form,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,20,Password input field detected,True
+external_credential,external_credential_form,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,30,Password input field detected | Credential form submits to an external destination,True
+suspicious_password,suspicious_language,ADDITIONAL_CONTROL,no form-local credential context,20,Password input field detected,True
+hidden_iframe,hidden_iframe,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,10,iframe detected,True
+iframe_text_only,iframe_text_only,BENIGN,no new contextual HTML signal,0,,True
+iframe_comment_only,iframe_comment_only,BENIGN,no new contextual HTML signal,0,,True
+iframe_script_only,iframe_script_only,BENIGN,no new contextual HTML signal,0,,True
+eval_text_only,eval_text_only,BENIGN,no new contextual HTML signal,0,,True
+eval_comment_only,eval_comment_only,BENIGN,no new contextual HTML signal,0,,True
+eval_code_only,eval_code_only,BENIGN,no new contextual HTML signal,0,,True
+eval_attribute_only,eval_attribute_only,BENIGN,no new contextual HTML signal,0,,True
+eval_executable_script,eval_executable_script,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,15,Potentially dangerous JavaScript detected,True
+eval_whitespace_script,eval_whitespace_script,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,15,Potentially dangerous JavaScript detected,True
+eval_json_script,eval_json_script,BENIGN,no new contextual HTML signal,0,,True
+credential_phrase_no_password,credential_phrase_no_password,BENIGN,no new contextual HTML signal,5,Suspicious keyword detected: verify your account,True
+password_plain,password_plain,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,20,Password input field detected,True
+password_verify_phrase,password_verify_phrase,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,35,Suspicious keyword detected: verify your account | Password input field detected | Credential verification language detected,True
+password_confirm_phrase,password_confirm_phrase,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,30,Password input field detected | Credential verification language detected,True
+external_credential_phrase,external_credential_phrase,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,40,Password input field detected | Credential form submits to an external destination | Credential verification language detected,True
+distant_credential_phrase,distant_credential_phrase,ADDITIONAL_CONTROL,no form-local credential context,25,Suspicious keyword detected: verify your account | Password input field detected,True
+multiple_noncredential_forms,multiple_forms,BENIGN,no new contextual HTML signal,0,,True
+fake_banking_login,banking_login_replica,SUSPICIOUS_CONTROLLED,all fixture-defined signals present,45,Suspicious keyword detected: verify your account | Suspicious keyword detected: bank login | Suspicious keyword detected: confirm identity | Password input field detected | Credential form submits to an external destination,True

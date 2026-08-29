@@ -1,0 +1,14 @@
+{
+  "experiment": "H5B4 script-scoped eval precision fix",
+  "old_phishing_detector_sha256": "071840eecd7fd39b0fea9a12dd87c5ec2f435268c46ac84d0a48a0a4cb024be6",
+  "new_phishing_detector_sha256": "856ca27be4228d07f03c759ce6202b53a22371c012a1f42aebb6399080efda83",
+  "risk_engine_sha256": "833c39dd75979be8413e9833723a5e55ea337338108f70875f97c089bf898485",
+  "confirmed_issue": "The previous whole-document eval( substring check scored visible text, comments, code blocks, attributes, and non-executable data scripts.",
+  "change": "Inspect only executable script element text with a narrow case-sensitive eval-call regex allowing whitespace before the parenthesis.",
+  "eval_score": 15,
+  "non_executable_types_skipped": ["application/json", "application/ld+json"],
+  "thresholds": {"screening": 10, "high_risk": 70},
+  "holdout_used": false,
+  "network_access": false,
+  "limitation": "Regex/script scoping does not parse JavaScript semantics and may still match eval calls in JavaScript comments or strings inside executable scripts."
+}

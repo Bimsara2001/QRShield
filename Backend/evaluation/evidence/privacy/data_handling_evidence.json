@@ -1,0 +1,94 @@
+{
+  "requirement_id": "I4",
+  "requirement": "Privacy/minimal personal-data approach",
+  "source_remediation_status": "COMPLETE",
+  "credential_rotation_status": "MANUAL_ROTATION_REQUIRED",
+  "production_code_changed": true,
+  "controls": {
+    "environment_secrets": {
+      "mongo_uri": "MONGO_URI",
+      "virustotal_api_key": "VIRUSTOTAL_API_KEY",
+      "hard_coded_production_values_in_relevant_source": false,
+      "missing_mongo_behavior": "Scan history storage is unavailable and the scan returns a safe error before sandbox processing.",
+      "missing_virustotal_behavior": "Optional integration returns status disabled and makes no VirusTotal request."
+    },
+    "git_hygiene": {
+      "env_ignored": true,
+      "env_example_present": true,
+      "env_example_contains_placeholders_only": true
+    },
+    "access_control": {
+      "protected_routes": ["POST /scan", "GET /history", "DELETE /history", "GET /stats", "GET /screenshots/{screenshot_name}"],
+      "header": "X-QRShield-Api-Token",
+      "environment_variable": "QRSHIELD_API_TOKEN",
+      "missing_token_behavior": "503 on protected routes",
+      "invalid_or_missing_request_token_behavior": "401 when a token is configured",
+      "boundary": "Shared application token; not per-user or enterprise authentication."
+    },
+    "screenshot_lifecycle": {
+      "generated_name": "UUID PNG filename",
+      "persistent_directory": "Backend/screenshots",
+      "successful_history_reference": "backend screenshot URL",
+      "failed_scan_cleanup": "Removes screenshot when a later scan operation fails.",
+      "clear_history_cleanup": "Deletes only screenshot references resolving to expected UUID PNG names inside the designated screenshot directory.",
+      "missing_file_behavior": "Tolerated and counted.",
+      "unsafe_reference_behavior": "Rejected without filesystem deletion.",
+      "cleanup_failure_behavior": "Logged and counted; history clear remains successful after database deletion."
+    },
+    "retention": {
+      "active_history_screenshots": "Retained until Clear History.",
+      "orphan_cleanup": "Only unreferenced UUID screenshots older than configured retention are removed.",
+      "environment_variable": "QRSHIELD_SCREENSHOT_RETENTION_DAYS",
+      "default_days": 30,
+      "cleanup_trigger": ["scan after URL validation", "Clear History"]
+    },
+    "logging": {
+      "full_url_avoidance": "URL-validation failures log exception type rather than exception text; worker network-block logs omit blocked URLs.",
+      "residual": "Operational logs and exception stacks may exist; sink, retention, and provider handling are deployment concerns not established here."
+    },
+    "user_disclosure": [
+      "evaluation/PRIVACY_AND_DATA_HANDLING_NOTICE.md",
+      "Frontend/qrshield_app/lib/screens/settings_screen.dart"
+    ]
+  },
+  "stored_data_and_purpose": {
+    "normal_request_fields": ["url"],
+    "history_document_fields": {
+      "original_url": "scan/history display and analysis context",
+      "final_url": "resolved destination display and analysis context",
+      "title": "result/history identification",
+      "screenshot": "destination preview and history thumbnail",
+      "risk_score": "result/history display",
+      "verdict": "result/history display and statistics",
+      "reasons": "result explanation",
+      "virustotal": "supplementary intelligence result"
+    },
+    "not_intentionally_collected": ["participant usability IDs", "names", "email addresses", "device identifiers"],
+    "boundary": "URLs, titles, query strings, screenshots, reasons, and external results can still contain sensitive information."
+  },
+  "external_transmission": {
+    "sandbox": "Validated URL is processed in the short-lived browser sandbox; HTML is not stored in the successful history document.",
+    "virustotal": "Final URL is sent only when VIRUSTOTAL_API_KEY is configured.",
+    "third_party_retention_claim": "None"
+  },
+  "tests": [
+    "tests/test_privacy_controls.py::test_missing_virustotal_secret_disables_optional_integration",
+    "tests/test_privacy_controls.py::test_sensitive_route_token_requires_configuration_and_matching_value",
+    "tests/test_privacy_controls.py::test_screenshot_route_registers_token_guard_and_serves_authorized_handler",
+    "tests/test_privacy_controls.py::test_clear_history_removes_owned_screenshots_and_ignores_missing_or_unsafe_references",
+    "tests/test_privacy_controls.py::test_clear_history_keeps_success_status_when_screenshot_cleanup_fails",
+    "tests/test_privacy_controls.py::test_orphan_retention_removes_only_aged_unreferenced_owned_screenshots",
+    "tests/test_privacy_controls.py::test_tracked_configuration_uses_environment_variables_without_embedded_production_credentials"
+  ],
+  "manual_actions_required": [
+    "Revoke/rotate the historically exposed MongoDB credential.",
+    "Revoke/rotate the historically exposed VirusTotal credential.",
+    "Provide replacement values and QRSHIELD_API_TOKEN through deployment environment or a secret manager.",
+    "Do not treat this as a claim about Git history, backups, infrastructure, third parties, encryption at rest, or legal compliance."
+  ],
+  "decision": {
+    "status_before": "PARTIAL",
+    "status_after": "COMPLETE",
+    "basis": "Implemented controls plus focused tests and disclosure support the scoped proposal requirement; manual credential rotation remains explicitly outstanding."
+  }
+}

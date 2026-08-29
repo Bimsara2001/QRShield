@@ -1,0 +1,272 @@
+{
+  "false_negative_count": 5213,
+  "false_negative_reasons": {},
+  "false_negative_samples_redacted": [
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000035",
+      "url_sha256": "55f65d8704671bbeaa5706b5e8ccd2c0d9e572fdb5de4f2dd67ccd505e32fd1e"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000081",
+      "url_sha256": "17b9abc97f59b65105be70b49d28b918b07f677a62efed7751b3680ad9205a79"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000109",
+      "url_sha256": "8c048bccec88098ff6ebff7cd3b7b55a4456528913519e1c4c9285f78ef27870"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000145",
+      "url_sha256": "4276d1bd25ae6017e5d4bba7ebfab8bf0824a8ddfca6b004682b4b667954ffc2"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000212",
+      "url_sha256": "e525240917ea4ae0da1d4c8135e0036c385d6ec6129b1775d87b87fcc7d9d680"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000250",
+      "url_sha256": "38f7d754a81468b06e7a253f1f25de27c210dc7d4c4d25f29b06495a66431843"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000257",
+      "url_sha256": "cb6c82726e0f0d407b37125e3963efff0494ef1cebe6b219d6acafa3e0783707"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000361",
+      "url_sha256": "8c4da5ba4dacbd979440436a0a074fe23ef8bc6e44b024169d136075a6b1313a"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000432",
+      "url_sha256": "121a93015ae18142c231bab8a4f9707a9f8e13fec01a57d3f3bb7f50a5844624"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000450",
+      "url_sha256": "ca0afa94ba010b888e05e3133fe6a9142398fb0ab6d2d5970e9c16e8d318dc70"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000797",
+      "url_sha256": "dbef6316b0be47c2d137494cc46312d1cfe7f7170a65729e4af3dffc035d187a"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000820",
+      "url_sha256": "4a74fac23e73b9769886c4a6fbb26daebec5fe9474d858acb347e182269a3706"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-000960",
+      "url_sha256": "b86f4c352a59cf7f1aa7bf4e4d8cc37a8b99bac91ac35ee312ac40d3a64ec6dd"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001121",
+      "url_sha256": "5965f2065b9d5f3167d2b97db63bfc19c1e1049bcae166cca6fc9bf56aa4954e"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001173",
+      "url_sha256": "df41fc99da21d75332c0fa5a8367a7f8831098b3b9ef6cb15fd0380d768ff064"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001320",
+      "url_sha256": "13100b6b5275a7260d89cb65d57c2c0d730a15a01742668291710d5370819e7b"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001342",
+      "url_sha256": "a60d87e702192b09326114d35d593b13e777b4c7d703a2d1ec70ed8246e028b1"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001852",
+      "url_sha256": "053d6192895205d660b3c2aab681b2c1cda399eef9f608274069e0bcdc1357c6"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-001873",
+      "url_sha256": "5d5efba85e0ddcacc776eee3adae0c6d16644c9ca389824392a2099f3d34bec3"
+    },
+    {
+      "reasons": "",
+      "risk_score": 0,
+      "sample_id": "phiusiil-holdout-002002",
+      "url_sha256": "f11a6aa34b814427dd8dd1deb7776c72ae06a1000471251b4bcdaf4cb7c62359"
+    }
+  ],
+  "false_positive_count": 4463,
+  "false_positive_reasons": {
+    "Hyphenated URL detected": 3028,
+    "Multiple hyphens detected": 286,
+    "Suspicious keyword detected: account": 10,
+    "Suspicious keyword detected: bank": 103,
+    "Suspicious keyword detected: bonus": 4,
+    "Suspicious keyword detected: check": 25,
+    "Suspicious keyword detected: crypto": 11,
+    "Suspicious keyword detected: free": 103,
+    "Suspicious keyword detected: gift": 23,
+    "Suspicious keyword detected: login": 1,
+    "Suspicious keyword detected: password": 3,
+    "Suspicious keyword detected: paypal": 1,
+    "Suspicious keyword detected: secure": 6,
+    "Suspicious keyword detected: security": 32,
+    "Suspicious keyword detected: signin": 3,
+    "Suspicious keyword detected: update": 10,
+    "Suspicious keyword detected: verify": 1,
+    "Suspicious keyword detected: wallet": 5,
+    "Suspiciously long domain name": 1329,
+    "Too many dots in URL": 18
+  },
+  "false_positive_samples_redacted": [
+    {
+      "reasons": "Suspicious keyword detected: crypto",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000023",
+      "url_sha256": "f8baaf8d4b2e13f55da568670a6d902a6dcb1993ec4874e4227b1453fd2787b1"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000098",
+      "url_sha256": "fb3b5a37cc6d2c41a437e014876a773b19f3c005004d0970ce1cb755a2aebb85"
+    },
+    {
+      "reasons": "Hyphenated URL detected | Multiple hyphens detected",
+      "risk_score": 25,
+      "sample_id": "phiusiil-holdout-000120",
+      "url_sha256": "f4c8e651c1a06385072533b6597f2d786979271401c67549f48f9a3802cc853f"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000142",
+      "url_sha256": "ba8b5916d8d9cd31a178c7a758d081219caa72eafcb0c6c203fdc93a7d7ea9d4"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000156",
+      "url_sha256": "b9751f3a8b563f7837dfb2d4bb276939d60fa973ce87b3514831873d3b1bbaff"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000204",
+      "url_sha256": "256db2b712ab551f4d5c52cca9a093d58d787932836aa408b33325c99d7a4493"
+    },
+    {
+      "reasons": "Hyphenated URL detected | Suspiciously long domain name",
+      "risk_score": 20,
+      "sample_id": "phiusiil-holdout-000209",
+      "url_sha256": "fe40a5bd01e230a31f02c8d0d1a0efff74e36ee63f8d848397ec41a482004bea"
+    },
+    {
+      "reasons": "Suspiciously long domain name",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000274",
+      "url_sha256": "f12b7308a43612a7e54fc736156d46e1a1a0f37de690bb39f2378ab2dc912c6c"
+    },
+    {
+      "reasons": "Suspiciously long domain name",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000327",
+      "url_sha256": "c9d20139d96a904760d9b16f926f4af5748a93d1527da05362c7fa33826c547f"
+    },
+    {
+      "reasons": "Suspiciously long domain name",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000356",
+      "url_sha256": "4c5abaf711c093f57400a0713e494d6059d9a7d4b2fa82cfe21ab90b4d24b1be"
+    },
+    {
+      "reasons": "Suspiciously long domain name",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000490",
+      "url_sha256": "c4d9d85c3225bb481384a76eb1563e91c46caa3c81344afc58350b6068bab884"
+    },
+    {
+      "reasons": "Hyphenated URL detected | Suspiciously long domain name",
+      "risk_score": 20,
+      "sample_id": "phiusiil-holdout-000497",
+      "url_sha256": "fc3d45c0c78cfe2d06578c1ed53539ff8d487dbb0c0db47b5b1f5d924d4fe2a0"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000528",
+      "url_sha256": "1584e86d8444ca7bfa1c1df10c6d99c99f01304b50d1f0ceb96ce873e59109ca"
+    },
+    {
+      "reasons": "Hyphenated URL detected | Suspiciously long domain name",
+      "risk_score": 20,
+      "sample_id": "phiusiil-holdout-000555",
+      "url_sha256": "8cfc0af90becac52cabfbfc606c2e114626e7f21247573b8f21865f95ddbc3de"
+    },
+    {
+      "reasons": "Suspiciously long domain name",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000558",
+      "url_sha256": "673e1827aac7015de1d5e448309f82a6cdf962b1f0ea7e8acf54ad4cc845ebdb"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000595",
+      "url_sha256": "e4b1931e2de370cbac9f6a6560d58d8ff9b32ad96ab5db98c235b44799977749"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000596",
+      "url_sha256": "befc60f3fabad62c904d52cf98541baa4a5171ef5963149c71ce9993a78f11ac"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000625",
+      "url_sha256": "8e337aab336f629a96ed09e7868af5c32b40d7519248b17ff4a1f2796ac3b535"
+    },
+    {
+      "reasons": "Hyphenated URL detected | Multiple hyphens detected",
+      "risk_score": 25,
+      "sample_id": "phiusiil-holdout-000654",
+      "url_sha256": "ab5881aeca258676e7f5741e02673c06e3b06cb52f58c475800646b74b1aca48"
+    },
+    {
+      "reasons": "Hyphenated URL detected",
+      "risk_score": 10,
+      "sample_id": "phiusiil-holdout-000777",
+      "url_sha256": "6cf5a36410b12f9203bb7a2766953bac5713ff97a01f581cdd436f3deae64703"
+    }
+  ],
+  "policy": "score >= 10"
+}
